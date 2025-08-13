@@ -1,3 +1,4 @@
+import headSkinChoke from "@/assets/head-skin-choke.png";
 import ServerStatus from "@/components/server-status";
 import {
   Carousel,
@@ -15,7 +16,7 @@ export default function App() {
       <header className="flex flex-col items-center justify-center gap-8 p-18 lg:flex-row">
         <div id="logo">
           <img
-            src="./src/assets/head-skin-choke.png"
+            src={headSkinChoke}
             alt="Imagem da skin do Choke"
             className="rounded-md object-contain"
           />

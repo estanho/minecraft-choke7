@@ -1,3 +1,5 @@
+import offlineIcon from "@/assets/offline.png";
+import onlineIcon from "@/assets/online.png";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useServerStatus } from "@/hooks/useServerStatus";
 
@@ -8,7 +10,7 @@ export default function ServerStatus() {
 
   return (
     <div className="font-mine m-4 flex justify-center text-sm text-white lg:text-base">
-      <div className="flex gap-2 rounded-md bg-[url('./src/assets/background-status.png')] p-4">
+      <div className="flex gap-2 rounded-md bg-[url('/src/assets/background-status.png')] p-4">
         {isOfflineState ? (
           <Skeleton className="h-16 w-16" />
         ) : (
@@ -46,10 +48,10 @@ export default function ServerStatus() {
                 <span className="text-gray-500">/</span>
                 <span>{data.players?.max ?? 0}</span>
               </div>
-              <img src="./src/assets/online.png" className="mt-1 h-4 w-4" />
+              <img src={onlineIcon} className="mt-1 h-4 w-4" />
             </>
           ) : (
-            <img src="./src/assets/offline.png" className="mt-1 h-4 w-4" />
+            <img src={offlineIcon} className="mt-1 h-4 w-4" />
           )}
         </div>
       </div>
