@@ -24,7 +24,6 @@ export default function ServerStatus() {
 
         <div>
           <span>Lagoa dos Sapos</span>
-          <span className="text-red-500">{isOfflineState && " - ERROR"}</span>
           {isOfflineState ? (
             <>
               <Skeleton className="h-[17px] w-[364px]" />
