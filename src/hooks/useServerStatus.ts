@@ -9,6 +9,7 @@ export function useServerStatus() {
   const query = useQuery({
     queryKey: ["server-status"],
     queryFn: fetchServerStatus,
+    refetchInterval: 60 * 5 * 1000,
     retry: false,
   });
 
