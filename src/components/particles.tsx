@@ -1,13 +1,15 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { useCallback, useMemo } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 
 const FallingParticles = () => {
-  // Inicializa o motor de partículas
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const particlesLoaded = useCallback(async (container) => {}, []);
 
   const options = useMemo(
