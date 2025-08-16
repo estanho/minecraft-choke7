@@ -99,7 +99,7 @@
 .dark {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
+  --card: oklch(20.528% 0.02741 134.031 / 0.502);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
@@ -137,27 +137,32 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-lime-100 dark:bg-[#191b00] text-foreground;
   }
 
   header {
-    @apply mask-b-from-80% mask-b-to-100% bg-[url('/background1.jpg')] bg-center;
+    @apply bg-[url('/images/backgrounds/header_bg_light.jpg')] bg-cover bg-center  transition-all  dark:bg-[url('/images/backgrounds/header_bg_dark.jpg')];
+    @apply mask-[url('/images/masks/header_mask.png')] mask-cover mask-bottom lg:mask-size-[100%_100%];
   }
 
   h1 {
-    @apply scroll-m-20 text-3xl font-extrabold text-balance;
+    @apply scroll-m-20 text-center text-3xl/tight lg:text-5xl/tight font-extrabold text-balance;
   }
 
   h2 {
-    @apply scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0;
+    @apply scroll-m-20 border-b pb-2 text-balance text-center text-3xl font-semibold first:mt-0;
+  }
+
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold;
   }
 
   p {
-    @apply leading-7 [&:not(:first-child)]:mt-6;
+    @apply text-lg leading-7 [&:not(:first-child)]:mt-6;
   }
 
   ul {
-    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+    @apply text-lg ml-6 list-disc [&>li]:mt-2;
   }
 }
 

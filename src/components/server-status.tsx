@@ -16,38 +16,40 @@ export default function ServerStatus() {
   const isOnlineState = data?.online && !isLoading && !isError;
 
   return (
-    <div className="font-mine m-4 flex justify-center">
-      <div className="flex gap-2 rounded-md bg-[url('/src/assets/background-status.png')] p-4">
-        {isOfflineState ? (
-          <Skeleton className="h-16 w-16" />
-        ) : (
-          <img
-            src={data?.icon}
-            alt="Ícone do Servidor"
-            className="h-16 w-16"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          />
-        )}
-
-        <div className="mt-1 text-sm lg:text-base">
-          <span className="text-white">Lagoa dos Sapos</span>
+    <div className="font-mine rounded-md border-1 bg-[url('/src/assets/background-status.png')] p-4">
+      <div className="flex justify-between">
+        <div className="flex gap-2">
           {isOfflineState ? (
-            <>
-              <Skeleton className="h-[17px] w-[190px] lg:h-[17px] lg:w-[364px]" />
-              <Skeleton className="mt-1 h-[17px] w-[100px] lg:h-[17px] lg:w-[264px]" />
-            </>
+            <Skeleton className="h-16 w-16" />
           ) : (
-            <>
-              {data?.motd?.html?.[0] && (
-                <div
-                  id="motd"
-                  dangerouslySetInnerHTML={{ __html: data.motd.html[0] }}
-                />
-              )}
-            </>
+            <img
+              src={data?.icon}
+              alt="Ícone do Servidor"
+              className="h-16 w-16"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
+            />
           )}
+          <div className="mt-1 text-sm lg:text-base">
+            <span className="text-white">Lagoa dos Sapos</span>
+            {isOfflineState ? (
+              <>
+                <Skeleton className="h-[17px] w-[140px] lg:h-[17px] lg:w-[364px]" />
+                <Skeleton className="mt-1 h-[17px] w-[100px] lg:h-[17px] lg:w-[264px]" />
+              </>
+            ) : (
+              <>
+                {data?.motd?.html?.[0] && (
+                  <div
+                    id="motd"
+                    className="text-balance"
+                    dangerouslySetInnerHTML={{ __html: data.motd.html[0] }}
+                  />
+                )}
+              </>
+            )}
+          </div>
         </div>
 
         <HoverCard>

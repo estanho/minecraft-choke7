@@ -84,7 +84,7 @@ const FallingParticles = () => {
             enable: true,
             area: 1000,
           },
-          value: 8,
+          value: 10,
         },
         opacity: {
           value: {
@@ -102,62 +102,67 @@ const FallingParticles = () => {
           options: {
             image: [
               {
-                src: "/leafs/leaf_0.png",
+                src: "/images/particles/firefly.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_1.png",
+                src: "/images/particles/leafs/leaf_0.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_2.png",
+                src: "/images/particles/leafs/leaf_1.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_3.png",
+                src: "/images/particles/leafs/leaf_2.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_4.png",
+                src: "/images/particles/leafs/leaf_3.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_5.png",
+                src: "/images/particles/leafs/leaf_4.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_6.png",
+                src: "/images/particles/leafs/leaf_5.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_7.png",
+                src: "/images/particles/leafs/leaf_6.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_8.png",
+                src: "/images/particles/leafs/leaf_7.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_9.png",
+                src: "/images/particles/leafs/leaf_8.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_10.png",
+                src: "/images/particles/leafs/leaf_9.png",
                 width: 5,
                 height: 5,
               },
               {
-                src: "/leafs/leaf_11.png",
+                src: "/images/particles/leafs/leaf_10.png",
+                width: 5,
+                height: 5,
+              },
+              {
+                src: "/images/particles/leafs/leaf_11.png",
                 width: 5,
                 height: 5,
               },
