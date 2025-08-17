@@ -9,7 +9,7 @@ import {
 import { mods } from "@/data/mods";
 import Autoplay from "embla-carousel-autoplay";
 
-export default function CarouselMods() {
+export function CarouselMods() {
   return (
     <Carousel
       opts={{

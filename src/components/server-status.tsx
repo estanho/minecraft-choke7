@@ -9,7 +9,7 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { useServerStatus } from "@/hooks/useServerStatus";
 
-export default function ServerStatus() {
+export function ServerStatus() {
   const { data, isLoading, isError } = useServerStatus();
 
   const isOfflineState = isLoading || isError || !data?.online;

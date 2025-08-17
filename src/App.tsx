@@ -1,25 +1,38 @@
 import headSkinChoke from "@/assets/head-skin-choke.png";
-import CarouselMods from "@/components/carousel-mods";
-import Link from "@/components/link";
+import { CarouselMods } from "@/components/carousel-mods";
+import { LinkInline } from "@/components/link-inline";
 import { ModeToggle } from "@/components/mode-toggle";
-import FallingParticles from "@/components/particles";
-import ServerStatus from "@/components/server-status";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { FallingParticles } from "@/components/particles";
+import { ServerStatus } from "@/components/server-status";
+import { TabDownloads } from "@/components/tabs/tab-downloads";
+import { TabLaunchers } from "@/components/tabs/tab-launchers";
+import { TabNext } from "@/components/tabs/tab-next";
+import { TabOtherDownloads } from "@/components/tabs/tab-other-downloads";
+import { TabPassword } from "@/components/tabs/tab-password";
+import { TabWhitelist } from "@/components/tabs/tab-whitelist";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useRef, useState } from "react";
 
 export default function App() {
+  const [value, setValue] = useState("launchers");
+
+  const targetElement = useRef<HTMLDivElement>(null);
+
+  function scrollingToElement(value: string) {
+    setValue(value);
+    if (!targetElement.current) return;
+    targetElement.current.scrollIntoView({
+      behavior: "smooth" as ScrollBehavior,
+    });
+  }
+
   return (
     <div className="bg-[url('/images/backgrounds/main_bg.jpg')] transition-colors">
       <FallingParticles />
 
       <header>
-        <div id="header-overlay" className="bg-lime-950/60">
+        <div id="header-overlay" className="bg-lime-950/50">
           <ModeToggle />
           <div className="flex flex-col items-center justify-center gap-12 px-18 py-28 lg:flex-row lg:py-44">
             <div id="logo">
@@ -36,8 +49,12 @@ export default function App() {
                 </h1>
                 <p className="text-center text-xl">
                   Servidor de Minecraft disponibilizado pela{" "}
-                  <Link href="https://enxadahost.com/" text="EnxadaHost" /> para
-                  os SUBS da comunidade.
+                  <LinkInline
+                    href="https://enxadahost.com/"
+                    text="EnxadaHost"
+                    label="Link para o site da EnxadaHost"
+                  />{" "}
+                  para os SUBS da comunidade.
                 </p>
               </div>
             </div>
@@ -89,17 +106,20 @@ export default function App() {
                   <li>Não abuse de bugs e não utilize trapaças!</li>
                 </ul>
                 <p className="text-center">
-                  Qualquer problema ou denúncia, converse com os ADM&apos;s no
-                  Discord. Mantenha o respeito e não seja um cuzão!
+                  Qualquer problema ou denúncia, converse com os administradores
+                  no Discord.
                 </p>
+                <blockquote className="text-muted-foreground mt-6 border-l-2 pl-6 italic">
+                  &quot;Não seja um c*zão.&quot; - Choke7
+                </blockquote>
               </div>
             </Card>
           </section>
 
-          <section id="orientations" className="mx-auto max-w-3xl">
+          <section id="orientations" className="mx-auto max-w-4xl">
             <Card>
               <h2>Orientações</h2>
-              <div className="space-y-4">
+              <div id="tutorial" className="space-y-4">
                 <h3>Tutorial em Vídeo</h3>
                 <p>
                   Tutorial completo de como instalar e configurar o seu
@@ -116,74 +136,64 @@ export default function App() {
                   ></iframe>
                 </div>
               </div>
-              <h3>Passo a Passo</h3>
-              <Tabs defaultValue="launcher">
+              <h3 ref={targetElement}>Passo a Passo</h3>
+
+              <Tabs
+                defaultValue="launchers"
+                value={value}
+                onValueChange={setValue}
+              >
                 <TabsList>
-                  <TabsTrigger value="launcher">Launchers</TabsTrigger>
+                  <TabsTrigger value="launchers">Launchers</TabsTrigger>
                   <TabsTrigger value="downloads">Downloads</TabsTrigger>
                   <TabsTrigger value="password">Senha no Minecraft</TabsTrigger>
                   <TabsTrigger value="whitelist">Whitelist</TabsTrigger>
                 </TabsList>
-                <TabsContent value="launcher">
-                  <div className="space-y-4">
-                    <h3>Launchers</h3>
-                    <div>
-                      <p>
-                        Para executar o Minecraft é necessário possuir um
-                        launcher.
-                      </p>
-                      <p>
-                        Todos os Launchers são compatíveis com o servidor com
-                        exceção do TLauncher (se você utiliza o TLauncher
-                        recomendo muito trocar para o SKLauncher que é muito
-                        mais performático e recente, além de não possuir
-                        polêmicas relacionadas a{" "}
-                        <Link
-                          href="https://www.techtudo.com.br/guia/2024/08/minecraft-tlauncher-tem-virus-veja-riscos-de-jogar-colocar-skins-e-mais-edjogos.ghtml"
-                          text="spyware"
-                        />
-                        ).
-                      </p>
-                      <p>Escolha qual launcher você vai utilizar.</p>
-                      <Accordion type="multiple">
-                        <AccordionItem value="sklauncher">
-                          <AccordionTrigger className="cursor-pointer">
-                            <div className="flex items-center gap-3">
-                              <img
-                                src="/images/launchers/logo-sklauncher.png"
-                                alt="Logo do SKLauncher"
-                                className="w-10 rounded-lg object-cover"
-                              />
-                              <span>SKLauncher (Recomendado)</span>
-                            </div>
-                          </AccordionTrigger>
-                          <AccordionContent>teste</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="original" className="mt-2">
-                          <AccordionTrigger className="cursor-pointer">
-                            <div className="flex items-center gap-3">
-                              <img
-                                src="/images/launchers/logo-original.png"
-                                alt="Logo do SKLauncher"
-                                className="w-10 rounded-lg object-cover"
-                              />
-                              <span>Launcher Original</span>
-                            </div>
-                          </AccordionTrigger>
-                          <AccordionContent>teste</AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
-                      <p>
-                        Para os outros launchers a instalação é bem semelhante.
-                      </p>
-                    </div>
-                  </div>
+                <TabsContent value="launchers">
+                  <TabLaunchers />
+                  <TabNext
+                    scrollingToElement={scrollingToElement}
+                    tabName="downloads"
+                    buttonText="Downloads"
+                  />
+                </TabsContent>
+                <TabsContent value="downloads">
+                  <TabDownloads />
+                  <TabNext
+                    scrollingToElement={scrollingToElement}
+                    tabName="password"
+                    buttonText="Senha do Minecraft"
+                  />
+                  <TabOtherDownloads />
+                </TabsContent>
+                <TabsContent value="password">
+                  <TabPassword />
+                  <TabNext
+                    scrollingToElement={scrollingToElement}
+                    tabName="whitelist"
+                    buttonText="Whitelist"
+                  />
+                </TabsContent>
+                <TabsContent value="whitelist">
+                  <TabWhitelist />
                 </TabsContent>
               </Tabs>
             </Card>
           </section>
         </div>
       </main>
+      <footer className="text-foreground/80 mt-8 p-8 text-center">
+        <p>
+          © {new Date().getFullYear()}
+          {" Equipe da Lagoa Azul e "}
+          <LinkInline
+            href="https://pedrohrg.vercel.app/"
+            text="Estanho"
+            label="Link para o portfólio do programador Pedro Henrique (Estanho)"
+          />
+          .
+        </p>
+      </footer>
     </div>
   );
 }

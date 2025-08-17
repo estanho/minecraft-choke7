@@ -1,4 +1,10 @@
-export const mods = [
+interface modInterface {
+  name: string;
+  url: string;
+  img_url: string;
+}
+
+export const mods: modInterface[] = [
   {
     name: "Aether",
     url: "https://www.curseforge.com/minecraft/mc-mods/aether",

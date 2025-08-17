@@ -157,8 +157,12 @@
     @apply scroll-m-20 text-2xl font-semibold;
   }
 
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold;
+  }
+
   p {
-    @apply text-lg leading-7 [&:not(:first-child)]:mt-6;
+    @apply text-base leading-7 [&:not(:first-child)]:mt-6;
   }
 
   ul {
@@ -169,5 +173,13 @@
 @layer utilities {
   #motd > span:last-child{
     @apply font-mine-icon relative -top-[11px];
+  }
+
+  #accordion-trigger {
+    @apply flex items-center gap-3 p-1;
+  }
+
+  #accordion-trigger > img {
+    @apply w-8 rounded-lg object-cover;
   }
 }

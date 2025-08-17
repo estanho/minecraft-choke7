@@ -4,7 +4,7 @@ import { useCallback, useMemo } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 
-const FallingParticles = () => {
+export function FallingParticles() {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
@@ -42,7 +42,7 @@ const FallingParticles = () => {
         },
         modes: {
           push: {
-            quantity: 3,
+            quantity: 1,
           },
           repulse: {
             distance: 150,
@@ -84,7 +84,7 @@ const FallingParticles = () => {
             enable: true,
             area: 1000,
           },
-          value: 10,
+          value: 8,
         },
         opacity: {
           value: {
@@ -213,6 +213,4 @@ const FallingParticles = () => {
       />
     </div>
   );
-};
-
-export default FallingParticles;
+}
