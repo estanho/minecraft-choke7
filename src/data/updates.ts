@@ -1,6 +1,5 @@
 interface updateInterface {
   date: string;
-  title: string;
   changes: {
     title: string;
     description: string;
@@ -10,24 +9,13 @@ interface updateInterface {
 
 export const updates: updateInterface[] = [
   {
-    date: "18/08/2024",
-    title: "Atualização 1.20.1",
+    date: "20/08/2025",
     changes: [
-      { title: "Adicionado", description: "Shaders", dependency: ["1.20.1"] },
-    ],
-  },
-  {
-    date: "17/08/2024",
-    title: "Atualização 1.20.1",
-    changes: [
-      { title: "Adicionado", description: "Shaders", dependency: ["1.20.1"] },
-    ],
-  },
-  {
-    date: "16/08/2024",
-    title: "Atualização 1.20.1",
-    changes: [
-      { title: "Adicionado", description: "Shaders", dependency: ["1.20.1"] },
+      {
+        title: "✲ Inauguração do servidor?",
+        description: "Será que tudo vai funcionar?",
+        dependency: ["eis a questão"],
+      },
     ],
   },
 ];

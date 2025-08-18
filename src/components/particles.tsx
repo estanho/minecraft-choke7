@@ -42,7 +42,7 @@ export function FallingParticles() {
         },
         modes: {
           push: {
-            quantity: 1,
+            quantity: 0,
           },
           repulse: {
             distance: 150,
@@ -84,7 +84,7 @@ export function FallingParticles() {
             enable: true,
             area: 1000,
           },
-          value: 8,
+          value: 12,
         },
         opacity: {
           value: {

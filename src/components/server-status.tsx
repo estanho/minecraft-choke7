@@ -1,5 +1,7 @@
 import offlineIcon from "@/assets/offline.png";
 import onlineIcon from "@/assets/online.png";
+import froglaugh from "@/assets/sounds/froglaugh.mp3";
+import { ClickableSoundImage } from "@/components/clickable-sound-image";
 import { Button } from "@/components/ui/button";
 import {
   HoverCard,
@@ -22,9 +24,11 @@ export function ServerStatus() {
           {isOfflineState ? (
             <Skeleton className="h-16 w-16" />
           ) : (
-            <img
+            <ClickableSoundImage
               src={data?.icon}
+              soundUrl={froglaugh}
               alt="Ícone do Servidor"
+              volume={0.1}
               className="h-16 w-16"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";

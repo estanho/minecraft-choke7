@@ -9,15 +9,16 @@ interface LinkButtonProps {
 
 export function LinkButton({ href, text, label }: LinkButtonProps) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-      <Button
-        variant={"link"}
-        size={"lg"}
-        className="hover:bg-primary/5 mb-4 cursor-pointer border"
+    <Button size={"lg"} className="mb-4 cursor-pointer border" asChild>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label}
       >
         <Link2Icon />
         {text}
-      </Button>
-    </a>
+      </a>
+    </Button>
   );
 }

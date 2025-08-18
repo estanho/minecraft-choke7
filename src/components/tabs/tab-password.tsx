@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ImagePlay } from "lucide-react";
 
 export function TabPassword() {
   return (
@@ -24,7 +25,12 @@ export function TabPassword() {
       </p>
       <Accordion id="password" type="multiple">
         <AccordionItem value="password">
-          <AccordionTrigger>GIF mostrando como criar a senha</AccordionTrigger>
+          <AccordionTrigger>
+            <div className="flex items-center gap-4">
+              <ImagePlay />
+              GIF mostrando como criar a senha
+            </div>
+          </AccordionTrigger>
           <AccordionContent>
             <p className="text-base">
               Você não precisa lembrar dessa senha, ela é utilizada pelo mod

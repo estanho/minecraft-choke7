@@ -1,17 +1,20 @@
 import headSkinChoke from "@/assets/head-skin-choke.png";
 import { CarouselMods } from "@/components/carousel-mods";
+import { ClickableSoundImage } from "@/components/clickable-sound-image";
+import { LinkButton } from "@/components/link-button";
 import { LinkInline } from "@/components/link-inline";
 import { ModeToggle } from "@/components/mode-toggle";
+import { NetworkButtons } from "@/components/network-buttons";
 import { FallingParticles } from "@/components/particles";
 import { ServerStatus } from "@/components/server-status";
 import { TabDownloads } from "@/components/tabs/tab-downloads";
 import { TabLaunchers } from "@/components/tabs/tab-launchers";
 import { TabNext } from "@/components/tabs/tab-next";
-import { TabOtherDownloads } from "@/components/tabs/tab-other-downloads";
 import { TabPassword } from "@/components/tabs/tab-password";
 import { TabWhitelist } from "@/components/tabs/tab-whitelist";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Updates } from "@/components/updates";
 import { useRef, useState } from "react";
 
 export default function App() {
@@ -36,14 +39,14 @@ export default function App() {
           <ModeToggle />
           <div className="flex flex-col items-center justify-center gap-12 px-18 py-28 lg:flex-row lg:py-44">
             <div id="logo">
-              <img
+              <ClickableSoundImage
                 src={headSkinChoke}
                 alt="Imagem da skin do Choke"
-                className="rounded-md"
+                className="rounded-lg"
               />
             </div>
             <div id="title-and-description">
-              <div className="max-w-2xl text-white text-shadow-lime-950">
+              <div className="max-w-2xl space-y-3 text-white text-shadow-lime-950">
                 <h1 className="font-title text-pretty">
                   Servidor de Minecraft da Choke7
                 </h1>
@@ -56,6 +59,9 @@ export default function App() {
                   />{" "}
                   para os SUBS da comunidade.
                 </p>
+                <div className="mt-6 flex items-center justify-center">
+                  <NetworkButtons />
+                </div>
               </div>
             </div>
           </div>
@@ -68,19 +74,19 @@ export default function App() {
             <CarouselMods />
           </section>
 
-          <section id="server-status" className="mx-auto max-w-3xl">
+          <section id="server-status" className="mx-auto max-w-4xl">
             <Card className="relative">
               <h2>Status do Servidor </h2>
               <img
                 src="/images/nerd.gif"
                 alt="ícone de nerd"
-                className="bg-card absolute -end-6 -top-6 m-2 h-12 w-12 rounded-3xl border-1 p-2 dark:bg-[#121a0d]"
+                className="bg-card absolute -end-6 -top-6 m-2 h-12 w-12 rounded-3xl border-1 p-2 hover:animate-spin dark:bg-[#121a0d]"
               />
               <ServerStatus />
             </Card>
           </section>
 
-          <section id="informations" className="mx-auto max-w-3xl">
+          <section id="informations" className="mx-auto max-w-4xl">
             <Card>
               <h2>Informações Gerais</h2>
               <div className="flex flex-col items-center justify-center">
@@ -94,7 +100,7 @@ export default function App() {
             </Card>
           </section>
 
-          <section id="rules" className="mx-auto max-w-3xl">
+          <section id="rules" className="mx-auto max-w-4xl">
             <Card>
               <h2>Regras</h2>
               <div className="flex flex-col items-center justify-center">
@@ -118,26 +124,7 @@ export default function App() {
 
           <section id="orientations" className="mx-auto max-w-4xl">
             <Card>
-              <h2>Orientações</h2>
-              <div id="tutorial" className="space-y-4">
-                <h3>Tutorial em Vídeo</h3>
-                <p>
-                  Tutorial completo de como instalar e configurar o seu
-                  Minecraft para jogar no servidor sem problemas.
-                </p>
-                <div className="flex flex-col items-center justify-center">
-                  <iframe
-                    className="h-96 w-full rounded-lg border-1"
-                    src="https://www.youtube.com/embed/XxBiCtJ4bWU?si=nLh-K03EW3QiZO4a"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-              <h3 ref={targetElement}>Passo a Passo</h3>
-
+              <h2 ref={targetElement}>Tutorial para instalação</h2>
               <Tabs
                 defaultValue="launchers"
                 value={value}
@@ -164,7 +151,6 @@ export default function App() {
                     tabName="password"
                     buttonText="Senha do Minecraft"
                   />
-                  <TabOtherDownloads />
                 </TabsContent>
                 <TabsContent value="password">
                   <TabPassword />
@@ -178,6 +164,36 @@ export default function App() {
                   <TabWhitelist />
                 </TabsContent>
               </Tabs>
+            </Card>
+          </section>
+
+          <section id="update-download" className="mx-auto max-w-4xl">
+            <Card>
+              <h2>Arquivo de Download da Última Atualização</h2>
+              <div>
+                <p>
+                  Só funciona se você já tiver realizada a primeira instalação!
+                </p>
+                <p>
+                  Download somente dos arquivos modificados pela última
+                  atualização. Sempre substitua a pasta &quot;mods&quot; por
+                  completo!
+                </p>
+                <div className="mt-4 max-w-fit">
+                  <LinkButton
+                    href="https://drive.google.com/file/d/1AVsIRBNAOrAwZA3EG10WfA4zxtwiPPfD/view?usp=sharing"
+                    text="Download da atualização"
+                    label="Link para download da atualização"
+                  />
+                </div>
+              </div>
+            </Card>
+          </section>
+
+          <section id="updates" className="mx-auto max-w-4xl">
+            <Card>
+              <h2>Atualizações</h2>
+              <Updates />
             </Card>
           </section>
         </div>

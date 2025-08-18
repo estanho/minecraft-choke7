@@ -8,12 +8,19 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Separator } from "@/components/ui/separator";
+import { ImagePlay } from "lucide-react";
 
 export function TabDownloads() {
   return (
     <>
       <h3>Downloads</h3>
       <h4>Primeira Instalação</h4>
+      <p>
+        O servidor possui diversos mods e configurações que devem ser instaladas
+        no seu Minecraft. Siga o passo a passo abaixo para instalar todos os
+        mods, emotes e arquivos de configuração.
+      </p>
       <p className="font-semibold">
         1. Baixe o arquivo .rar com tudo que é necessário para a primeira
         instalação.
@@ -33,7 +40,12 @@ export function TabDownloads() {
       </p>
       <Accordion id="appdata" type="multiple">
         <AccordionItem value="appdata">
-          <AccordionTrigger>Como encontrar a .minecraft?</AccordionTrigger>
+          <AccordionTrigger>
+            <div className="flex items-center gap-4">
+              <ImagePlay />
+              GIF mostrando como encontrar a .minecraft
+            </div>
+          </AccordionTrigger>
           <AccordionContent>
             <p className="text-base">
               Abra o &apos;Explorador de Arquivos&apos; do Windows, digite{" "}
@@ -48,17 +60,16 @@ export function TabDownloads() {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+
       <Accordion id="installation" type="multiple">
         <AccordionItem value="installation">
           <AccordionTrigger>
-            GIF mostrando como extrair os arquivos do .rar
+            <div className="flex items-center gap-4">
+              <ImagePlay />
+              GIF mostrando como extrair os arquivos do .rar
+            </div>
           </AccordionTrigger>
           <AccordionContent>
-            <img
-              src={installation}
-              alt="gif mostrando como instalar os mods"
-              className="rounded-lg border"
-            />
             <p>
               Você pode extrair os arquivos com qualquer programa de compressão.
               Estou utilizando o{" "}
@@ -69,14 +80,43 @@ export function TabDownloads() {
               />{" "}
               nesse caso.
             </p>
+            <img
+              src={installation}
+              alt="gif mostrando como instalar os mods"
+              className="rounded-lg border"
+            />
           </AccordionContent>
         </AccordionItem>
       </Accordion>
       <p className="font-semibold">3. Tudo pronto!</p>
       <p>
         Meus parabéns! 🎉 Você já instalou os mods, emotes e arquivos de
-        configuração! Agora é só iniciar o Minecraft e seguir para o próximo
-        passo:
+        configuração!
+      </p>
+
+      <Separator className="my-6" />
+
+      <h4>Shaders (Opcional)</h4>
+      <p>
+        Se quiser utilizar shaders, basta baixar o shader e colocar o arquivo
+        diretamente na pasta &apos;shaderpacks&apos; dentro da pasta .minecraft.
+      </p>
+      <p>Recomendações de shaders bacanas:</p>
+
+      <div className="mt-4 flex max-w-fit flex-col">
+        <LinkButton
+          href="https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/all?page=1&pageSize=20&version=1.20.1"
+          text="Download Complementary Shaders"
+          label="Link para download do Shader Complementary Shaders - Unbound"
+        />
+        <LinkButton
+          href="https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/all?page=1&pageSize=20&version=1.20.1"
+          text="Download Sildurs Vibrant Shaders"
+          label="Link para download do Shader Sildurs Vibrant Shaders"
+        />
+      </div>
+      <p className="mt-12 font-bold">
+        Agora é só iniciar o Minecraft e seguir para o próximo passo:
       </p>
     </>
   );
