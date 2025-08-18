@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
+import { download } from "@/data/download";
 import { ImagePlay } from "lucide-react";
 
 export function TabDownloads() {
@@ -26,7 +27,7 @@ export function TabDownloads() {
         instalação.
       </p>
       <LinkButton
-        href="https://drive.google.com/file/d/1AVsIRBNAOrAwZA3EG10WfA4zxtwiPPfD/view?usp=sharing"
+        href={download.download_url}
         text="Link para download do arquivo (.rar)"
         label="Link para download do arquivo (.rar)"
       />

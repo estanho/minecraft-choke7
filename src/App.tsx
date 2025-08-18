@@ -15,6 +15,7 @@ import { TabWhitelist } from "@/components/tabs/tab-whitelist";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Updates } from "@/components/updates";
+import { download } from "@/data/download";
 import { useRef, useState } from "react";
 
 export default function App() {
@@ -181,7 +182,7 @@ export default function App() {
                 </p>
                 <div className="mt-4 max-w-fit">
                   <LinkButton
-                    href="https://drive.google.com/file/d/1AVsIRBNAOrAwZA3EG10WfA4zxtwiPPfD/view?usp=sharing"
+                    href={download.last_update_url}
                     text="Download da atualização"
                     label="Link para download da atualização"
                   />
