@@ -201,7 +201,7 @@ export default function App() {
       </main>
 
       <footer className="text-foreground/80 mt-8 p-8 text-center">
-        <p>
+        <p className="font-semibold">
           © {new Date().getFullYear()}
           {" Equipe da Lagoa Azul e "}
           <LinkInline
