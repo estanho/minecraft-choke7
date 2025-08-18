@@ -44,7 +44,7 @@ export function TabPassword() {
             <p className="mt-2 text-center text-sm italic">
               Essa senha fica salva na sua pasta .minecraft em um arquivo
               chamado &apos;.sl_password&apos;. NÃO PASSE ESSE ARQUIVO PARA
-              NINGUÉM!🤓
+              NINGUÉM!
             </p>
           </AccordionContent>
         </AccordionItem>
