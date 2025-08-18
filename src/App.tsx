@@ -70,7 +70,7 @@ export default function App() {
       </header>
 
       <main>
-        <div className="mx-auto max-w-7xl space-y-8 px-4 py-12">
+        <div className="mx-auto max-w-7xl space-y-6 px-4 py-12">
           <section id="mods" className="space-y-6 text-center lg:px-12">
             <CarouselMods />
           </section>
@@ -199,6 +199,7 @@ export default function App() {
           </section>
         </div>
       </main>
+
       <footer className="text-foreground/80 mt-8 p-8 text-center">
         <p>
           © {new Date().getFullYear()}

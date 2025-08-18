@@ -1,4 +1,5 @@
 import { LinkInline } from "@/components/link-inline";
+import { Separator } from "@/components/ui/separator";
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
@@ -44,7 +45,7 @@ export function TabWhitelist() {
         formato de exemplo:
       </p>
       <div
-        className="bg-muted hover:bg-muted/80 relative flex cursor-pointer justify-between rounded p-2"
+        className="bg-background hover:bg-background/50 relative flex cursor-pointer justify-between rounded p-2"
         onClick={() =>
           copyToClipboard("Twitch: username - Minecraft: username")
         }
@@ -70,7 +71,10 @@ export function TabWhitelist() {
         Após enviar a mensagem, aguarde um dos administradores entrar em contato
         via privado do Discord com as orientações finais de conexão.
       </p>
-      <p className="text-muted-foreground text-center text-lg">
+
+      <Separator />
+
+      <p className="text-foreground/60 text-center text-lg">
         Esse servidor foi criado com o intuito de ser um ambiente amigável e
         tranquilo, respeite os players, não abuse de bugs e nem utilize
         trapaças. Qualquer problema converse com os administradores. Apenas

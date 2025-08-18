@@ -2,6 +2,7 @@ import appdata from "@/assets/orientation/appdata.gif";
 import installation from "@/assets/orientation/installation.gif";
 import { LinkButton } from "@/components/link-button";
 import { LinkInline } from "@/components/link-inline";
+import { ModalImg } from "@/components/modal-img";
 import {
   Accordion,
   AccordionContent,
@@ -22,6 +23,9 @@ export function TabDownloads() {
         no seu Minecraft. Siga o passo a passo abaixo para instalar todos os
         mods, emotes e arquivos de configuração.
       </p>
+
+      <Separator />
+
       <p className="font-semibold">
         1. Baixe o arquivo .rar com tudo que é necessário para a primeira
         instalação.
@@ -31,6 +35,9 @@ export function TabDownloads() {
         text="Link para download do arquivo (.rar)"
         label="Link para download do arquivo (.rar)"
       />
+
+      <Separator />
+
       <p className="font-semibold">
         2. O arquivo .rar baixado deve ser extraído na pasta .minecraft.
       </p>
@@ -39,6 +46,7 @@ export function TabDownloads() {
         existentes. Se você já tiver mods instalados é importante remove-los da
         pasta &quot;mods&quot; para evitar conflitos.
       </p>
+
       <Accordion id="appdata" type="multiple">
         <AccordionItem value="appdata">
           <AccordionTrigger>
@@ -47,16 +55,15 @@ export function TabDownloads() {
               GIF mostrando como encontrar a .minecraft
             </div>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="flex flex-col items-center">
             <p className="text-base">
               Abra o &apos;Explorador de Arquivos&apos; do Windows, digite{" "}
               <span className="font-bold">%appdata%</span> na barra de endereço
               e aperte Enter. Assim você encontrará a pasta .minecraft.
             </p>
-            <img
+            <ModalImg
               src={appdata}
-              alt="gif mostrando onde encontrar a pasta .minecraft"
-              className="rounded-lg border"
+              alt="GIF mostrando onde encontrar a pasta .minecraft"
             />
           </AccordionContent>
         </AccordionItem>
@@ -81,14 +88,16 @@ export function TabDownloads() {
               />{" "}
               nesse caso.
             </p>
-            <img
+            <ModalImg
               src={installation}
-              alt="gif mostrando como instalar os mods"
-              className="rounded-lg border"
+              alt="GIF mostrando como instalar os mods"
             />
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+
+      <Separator />
+
       <p className="font-semibold">3. Tudo pronto!</p>
       <p>
         Meus parabéns! 🎉 Você já instalou os mods, emotes e arquivos de
@@ -116,6 +125,9 @@ export function TabDownloads() {
           label="Link para download do Shader Sildurs Vibrant Shaders"
         />
       </div>
+
+      <Separator />
+
       <p className="mt-12 font-bold">
         Agora é só iniciar o Minecraft e seguir para o próximo passo:
       </p>

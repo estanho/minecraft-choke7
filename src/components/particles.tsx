@@ -84,7 +84,7 @@ export function FallingParticles() {
             enable: true,
             area: 1000,
           },
-          value: 12,
+          value: 8,
         },
         opacity: {
           value: {

@@ -1,10 +1,12 @@
 import password from "@/assets/orientation/password.gif";
+import { ModalImg } from "@/components/modal-img";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Separator } from "@/components/ui/separator";
 import { ImagePlay } from "lucide-react";
 
 export function TabPassword() {
@@ -23,6 +25,7 @@ export function TabPassword() {
         vez que conseguiu entrar no servidor. Assim protegendo o seu acesso e
         não deixando ninguém entrar utilizando o seu nick e sua whitelist.
       </p>
+
       <Accordion id="password" type="multiple">
         <AccordionItem value="password">
           <AccordionTrigger>
@@ -36,11 +39,8 @@ export function TabPassword() {
               Você não precisa lembrar dessa senha, ela é utilizada pelo mod
               automaticamente quando você entra no servidor.
             </p>
-            <img
-              src={password}
-              alt="gif mostrando como criar a senha"
-              className="rounded-lg border"
-            />
+            <ModalImg src={password} alt="GIF mostrando como criar a senha" />
+
             <p className="mt-2 text-center text-sm italic">
               Essa senha fica salva na sua pasta .minecraft em um arquivo
               chamado &apos;.sl_password&apos;. NÃO PASSE ESSE ARQUIVO PARA
@@ -49,7 +49,12 @@ export function TabPassword() {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-      <p>Agora você já pode ir para o próximo passo:</p>
+
+      <Separator />
+
+      <p className="mt-12 font-bold">
+        Agora você já pode ir para o próximo passo:
+      </p>
     </>
   );
 }

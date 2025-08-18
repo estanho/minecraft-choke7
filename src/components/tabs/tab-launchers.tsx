@@ -7,12 +7,14 @@ import sklauncher2 from "@/assets/orientation/sklauncher2.gif";
 import sklauncher3 from "@/assets/orientation/sklauncher3.gif";
 import { LinkButton } from "@/components/link-button";
 import { LinkInline } from "@/components/link-inline";
+import { ModalImg } from "@/components/modal-img";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Separator } from "@/components/ui/separator";
 import { Image, ImagePlay } from "lucide-react";
 
 export function TabLaunchers() {
@@ -74,10 +76,9 @@ export function TabLaunchers() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <img
+                  <ModalImg
                     src={sklauncher}
                     alt="Imagem mostrando onde baixar o SKLauncher"
-                    className="rounded-lg border"
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -107,10 +108,9 @@ export function TabLaunchers() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <img
+                  <ModalImg
                     src={sklauncher1}
                     alt="GIF mostrando como selecionar o username"
-                    className="rounded-lg border"
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -136,10 +136,9 @@ export function TabLaunchers() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <img
+                  <ModalImg
                     src={sklauncher2}
                     alt="GIF mostrando como criar a instalação"
-                    className="rounded-lg border"
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -164,10 +163,9 @@ export function TabLaunchers() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <img
+                  <ModalImg
                     src={sklauncher3}
                     alt="GIF mostrando como verificar a quantidade de memória"
-                    className="rounded-lg border"
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -215,10 +213,9 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p>Importante ser a versão 47.4.0 do Forge!</p>
-                  <img
+                  <ModalImg
                     src={original}
                     alt="GIF mostrando como verficar a quantidade de memória"
-                    className="rounded-lg border"
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -236,7 +233,7 @@ export function TabLaunchers() {
                     GIF mostrando como é a instalação do Forge
                   </div>
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="flex flex-col items-center">
                   <p>
                     Caso você não consiga executar o arquivo .jar, possivelmente
                     você não tem o Java instalado (
@@ -247,10 +244,9 @@ export function TabLaunchers() {
                     />
                     ).
                   </p>
-                  <img
+                  <ModalImg
                     src={original1}
                     alt="GIF mostrando como é a instalação do Forge"
-                    className="rounded-lg border"
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -283,10 +279,9 @@ export function TabLaunchers() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <img
+                  <ModalImg
                     src={original2}
                     alt="GIF mostrando como verificar a quantidade de memória"
-                    className="rounded-lg border"
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -299,6 +294,9 @@ export function TabLaunchers() {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+
+      <Separator />
+
       <p className="mt-12 font-bold">
         Depois de toda essa configuração siga para o próximo passo:
       </p>
