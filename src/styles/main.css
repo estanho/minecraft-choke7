@@ -19,8 +19,8 @@
   --font-title: "Press Start 2P", "Roboto", "sans-serif";
   --font-sans: "Roboto", "sans-serif";
 
-  --font-mine: Minecraftia, "sans-serif";
-  --font-mine-icon: Monocraft, "sans-serif";
+  --font-mine: Minecraftia, "Roboto", "sans-serif";
+  --font-mine-icon: Monocraft, "Roboto", "sans-serif";
 }
 
 @theme inline {
