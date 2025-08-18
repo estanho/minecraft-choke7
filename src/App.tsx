@@ -105,7 +105,7 @@ export default function App() {
             <Card>
               <h2>Regras</h2>
               <div className="flex flex-col items-center justify-center">
-                <ul className="underline decoration-lime-600/60 decoration-2 underline-offset-2">
+                <ul>
                   <li>Não destrua a contrução dos outros jogadores!</li>
                   <li>
                     Não será tolerado nenhum tipo de preconceito ou ofensa!
