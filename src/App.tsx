@@ -1,11 +1,11 @@
 import headSkinChoke from "@/assets/head-skin-choke.png";
 import { CarouselMods } from "@/components/carousel-mods";
-import { ClickableSoundImage } from "@/components/clickable-sound-image";
-import { LinkButton } from "@/components/link-button";
-import { LinkInline } from "@/components/link-inline";
+import { ClickableSoundImage } from "@/components/jokes/clickable-sound-image";
+import { LinkButton } from "@/components/links/link-button";
+import { LinkInline } from "@/components/links/link-inline";
 import { ModeToggle } from "@/components/mode-toggle";
 import { NetworkButtons } from "@/components/network-buttons";
-import { FallingParticles } from "@/components/particles";
+import { FallingParticles } from "@/components/particles/particles";
 import { ServerStatus } from "@/components/server-status";
 import { TabDownloads } from "@/components/tabs/tab-downloads";
 import { TabLaunchers } from "@/components/tabs/tab-launchers";
@@ -14,7 +14,7 @@ import { TabPassword } from "@/components/tabs/tab-password";
 import { TabWhitelist } from "@/components/tabs/tab-whitelist";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Updates } from "@/components/updates";
+import { UpdatesList } from "@/components/updates-list";
 import { download } from "@/data/download";
 import { useRef, useState } from "react";
 
@@ -79,7 +79,7 @@ export default function App() {
             <Card className="relative">
               <h2>Status do Servidor </h2>
               <img
-                src="/images/nerd.gif"
+                src="/images/emotes/nerd.gif"
                 alt="ícone de nerd"
                 className="bg-card absolute -end-6 -top-6 m-2 h-12 w-12 rounded-3xl border-1 p-2 hover:animate-spin dark:bg-[#121a0d]"
               />
@@ -174,8 +174,6 @@ export default function App() {
               <div>
                 <p>
                   Só funciona se você já tiver realizada a primeira instalação!
-                </p>
-                <p>
                   Download somente dos arquivos modificados pela última
                   atualização. Sempre substitua a pasta &quot;mods&quot; por
                   completo!
@@ -194,7 +192,7 @@ export default function App() {
           <section id="updates" className="mx-auto max-w-4xl">
             <Card>
               <h2>Atualizações</h2>
-              <Updates />
+              <UpdatesList />
             </Card>
           </section>
         </div>

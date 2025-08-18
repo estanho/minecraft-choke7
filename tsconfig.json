@@ -10,5 +10,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["src/components/particles.tsx"]
+  "exclude": ["src/components/particles/particles.tsx"]
 }

@@ -1,7 +1,7 @@
 import offlineIcon from "@/assets/offline.png";
 import onlineIcon from "@/assets/online.png";
 import froglaugh from "@/assets/sounds/froglaugh.mp3";
-import { ClickableSoundImage } from "@/components/clickable-sound-image";
+import { ClickableSoundImage } from "@/components/jokes/clickable-sound-image";
 import { Button } from "@/components/ui/button";
 import {
   HoverCard,

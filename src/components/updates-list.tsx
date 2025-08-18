@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { updates } from "@/data/updates";
 
-export function Updates() {
+export function UpdatesList() {
   return (
     <>
       {updates.map((update, index) => {

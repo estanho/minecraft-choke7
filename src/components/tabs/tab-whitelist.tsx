@@ -1,4 +1,4 @@
-import { LinkInline } from "@/components/link-inline";
+import { LinkInline } from "@/components/links/link-inline";
 import { Separator } from "@/components/ui/separator";
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";

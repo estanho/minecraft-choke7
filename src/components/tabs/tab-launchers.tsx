@@ -5,8 +5,8 @@ import sklauncher from "@/assets/orientation/sklauncher.png";
 import sklauncher1 from "@/assets/orientation/sklauncher1.gif";
 import sklauncher2 from "@/assets/orientation/sklauncher2.gif";
 import sklauncher3 from "@/assets/orientation/sklauncher3.gif";
-import { LinkButton } from "@/components/link-button";
-import { LinkInline } from "@/components/link-inline";
+import { LinkButton } from "@/components/links/link-button";
+import { LinkInline } from "@/components/links/link-inline";
 import { ModalImg } from "@/components/modal-img";
 import {
   Accordion,

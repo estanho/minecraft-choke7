@@ -1,7 +1,7 @@
 import appdata from "@/assets/orientation/appdata.gif";
 import installation from "@/assets/orientation/installation.gif";
-import { LinkButton } from "@/components/link-button";
-import { LinkInline } from "@/components/link-inline";
+import { LinkButton } from "@/components/links/link-button";
+import { LinkInline } from "@/components/links/link-inline";
 import { ModalImg } from "@/components/modal-img";
 import {
   Accordion,
