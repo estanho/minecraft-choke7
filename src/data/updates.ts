@@ -9,7 +9,7 @@ interface updateInterface {
 
 export const updates: updateInterface[] = [
   {
-    date: "20/08/2025",
+    date: "19/08/2025",
     changes: [
       {
         title: "✲ Inauguração do servidor?",
