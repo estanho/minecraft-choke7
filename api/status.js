@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const serverIP = process.env.SERVER_IP;
 
-  res.setHeader("Cache-Control", "s-maxage=180, stale-while-revalidate=30");
+  res.setHeader("Cache-Control", "s-maxage=120, stale-while-revalidate=30");
 
   const response = await fetch(`https://api.mcsrvstat.us/3/${serverIP}`);
   const data = await response.json();
