@@ -57,6 +57,9 @@ export function TabLaunchers() {
               Windows, Linux e MacOS. Ele possui muitos recursos para facilitar
               suas jogatinas no jogo quadrado.
             </p>
+
+            <Separator />
+
             <p className="font-semibold">
               1. Para instalar o SKLauncher, basta baixar o instalador no site
               do launcher. A instalação é bem simples e já vem com o Java junto.
@@ -84,10 +87,15 @@ export function TabLaunchers() {
               </AccordionItem>
             </Accordion>
 
+            <Separator />
+
             <p className="font-semibold">
               2. Após baixar e instalar, tente iniciar o launcher para ver se
               tudo foi instalado corretamente.
             </p>
+
+            <Separator />
+
             <p className="font-semibold">
               3. Quando abrir o SKLauncher pela primeira vez você vai conseguir
               selecionar o seu username no launcher.
@@ -115,6 +123,8 @@ export function TabLaunchers() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            <Separator />
 
             <p className="font-semibold">
               4. Ao entrar na tela inicial do launcher, você vai precisar criar
@@ -144,6 +154,8 @@ export function TabLaunchers() {
               </AccordionItem>
             </Accordion>
 
+            <Separator />
+
             <p className="font-semibold">
               5. É interessante nesse momento verificar se o jogo vai utilizar
               pelo menos 4GB de RAM.
@@ -171,6 +183,8 @@ export function TabLaunchers() {
               </AccordionItem>
             </Accordion>
 
+            <Separator />
+
             <p className="font-semibold">
               6. Depois de tudo, clique em &quot;Salvar&quot; e você vai ter
               criado a instalação configurada para o Minecraft. 🎉
@@ -193,10 +207,14 @@ export function TabLaunchers() {
             <p className="font-semibold">
               1. Baixe o Minecraft pelo site oficial e logue com a sua conta.
             </p>
+
+            <Separator />
+
             <p>
               2. É necessário baixar o Forge separadamente pois o launcher
               oficial não disponibiliza essa funcionalidade.
             </p>
+
             <LinkButton
               href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html"
               label="Link para download do Forge 1.20.1 - 47.4.0"
@@ -220,6 +238,8 @@ export function TabLaunchers() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            <Separator />
 
             <p className="font-semibold">
               3. Após baixar o Forge, execute o arquivo .jar para instalar.
@@ -252,11 +272,16 @@ export function TabLaunchers() {
               </AccordionItem>
             </Accordion>
 
+            <Separator />
+
             <p className="font-semibold">
               4. Com o Forge instalado, você pode iniciar o launcher original e
               nele vai existir uma nova &quot;instalação&quot; do Forge para
               jogar.
             </p>
+
+            <Separator />
+
             <p className="font-semibold">
               5. É interessante nesse momento verificar se o jogo vai utilizar
               pelo menos 4GB de RAM.
@@ -286,6 +311,8 @@ export function TabLaunchers() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            <Separator />
 
             <p className="font-semibold">
               6. Depois de tudo, você vai ter feito a configuração do launcher

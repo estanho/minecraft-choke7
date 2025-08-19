@@ -84,11 +84,11 @@ export function ServerStatus() {
               )}
             </Button>
           </HoverCardTrigger>
-          <HoverCardContent side="top">
+          <HoverCardContent side="top" className="flex">
             {isOnlineState && data?.players?.list ? (
               <div className="flex flex-col gap-1">
-                {data.players.list.map((player) => (
-                  <span className="font-mine font-bold" key={player.uuid}>
+                {data.players.list.map((player, index) => (
+                  <span className="font-mine-icon" key={index}>
                     {player.name}
                   </span>
                 ))}
