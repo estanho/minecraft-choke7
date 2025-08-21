@@ -17,6 +17,22 @@ export function ServerStatus() {
   const isOfflineState = isLoading || isError || !data?.online;
   const isOnlineState = data?.online && !isLoading && !isError;
 
+  function listPlayers() {
+    const players: string[] = [];
+
+    if (!data?.players?.list) return players;
+
+    for (let i = 0; i < data?.players?.online; i++) {
+      if (data?.players?.list[i]) {
+        players.push(data.players.list[i].name);
+      } else {
+        players.push("Player Anônimo");
+      }
+    }
+
+    return players;
+  }
+
   return (
     <div className="font-mine rounded-md border-1 bg-[url('/src/assets/background-status.png')] p-4">
       <div className="flex justify-between">
@@ -87,9 +103,9 @@ export function ServerStatus() {
           <HoverCardContent side="top" className="flex">
             {isOnlineState && data?.players?.list ? (
               <div className="flex flex-col gap-1">
-                {data.players.list.map((player, index) => (
+                {listPlayers().map((player, index) => (
                   <span className="font-mine-icon" key={index}>
-                    {player.name}
+                    {player}
                   </span>
                 ))}
               </div>

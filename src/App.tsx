@@ -92,7 +92,11 @@ export default function App() {
               <h2>Informações Gerais</h2>
               <div className="flex flex-col items-center justify-center">
                 <ul>
-                  <li>Servidor exclusivo para os SUBS da live da Choke7.</li>
+                  <li>
+                    Servidor exclusivo para os{" "}
+                    <span className="font-bold">SUBS</span> da live da{" "}
+                    <span className="font-bold">Choke7</span>.
+                  </li>
                   <li>Minecraft Java 1.20.1 - Forge (47.4.0).</li>
                   <li>Servidor dedicado (24/7).</li>
                   <li>Backup realizado todos os dias durante a madrugada.</li>
@@ -112,7 +116,11 @@ export default function App() {
                   </li>
                   <li>Não abuse de bugs e não utilize trapaças!</li>
                 </ul>
-                <p className="text-center">
+                <p className="text-lg font-bold underline underline-offset-3">
+                  Desrespeitar as regras acarretará em punições no server e na
+                  live.
+                </p>
+                <p className="mt-0">
                   Qualquer problema ou denúncia, converse com os administradores
                   no Discord.
                 </p>
