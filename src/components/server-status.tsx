@@ -18,19 +18,29 @@ export function ServerStatus() {
   const isOnlineState = data?.online && !isLoading && !isError;
 
   function listPlayers() {
-    const players: string[] = [];
+    if (!data?.online || !data.players || data.players.online === 0) {
+      return [];
+    }
 
-    if (!data?.players?.list) return players;
+    const { online, list } = data.players;
+    const result: string[] = [];
 
-    for (let i = 0; i < data?.players?.online; i++) {
-      if (data?.players?.list[i]) {
-        players.push(data.players.list[i].name);
-      } else {
-        players.push("Player Anônimo");
+    if (list && list.length > 0) {
+      list.forEach((player) => {
+        result.push(player.name);
+      });
+    }
+
+    const listedPlayersCount = list?.length || 0;
+    const anonymousPlayersCount = online - listedPlayersCount;
+
+    if (anonymousPlayersCount > 0) {
+      for (let i = 0; i < anonymousPlayersCount; i++) {
+        result.push("Player Anônimo");
       }
     }
 
-    return players;
+    return result;
   }
 
   return (
@@ -101,18 +111,16 @@ export function ServerStatus() {
             </Button>
           </HoverCardTrigger>
           <HoverCardContent side="top" className="flex">
-            {isOnlineState && data?.players?.list ? (
+            {isOnlineState && data.players?.online ? (
               <div className="flex flex-col gap-1">
                 {listPlayers().map((player, index) => (
-                  <span className="font-mine-icon" key={index}>
+                  <span className="font-mine-icon text-sm" key={index}>
                     {player}
                   </span>
                 ))}
               </div>
             ) : (
-              <div>
-                <span>Nenhum jogador conectado.</span>
-              </div>
+              <span>Sem players no momento.</span>
             )}
           </HoverCardContent>
         </HoverCard>
