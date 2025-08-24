@@ -76,6 +76,9 @@ export function TabLaunchers() {
                   <div className="flex items-center gap-4">
                     <Image />
                     Imagem mostrando onde baixar o SKLauncher
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -103,8 +106,7 @@ export function TabLaunchers() {
             <p>
               Para isso, clique no botão &apos;Mudar para modo offline&apos; no
               canto inferior esquerdo e depois digite o username que você deseja
-              utilizar no jogo (esse username não é definitivo, você pode
-              altera-lo).
+              utilizar no jogo.
             </p>
 
             <Accordion id="username-sklauncher" type="multiple">
@@ -113,6 +115,9 @@ export function TabLaunchers() {
                   <div className="flex items-center gap-4">
                     <ImagePlay />
                     GIF mostrando como selecionar o username
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -143,6 +148,9 @@ export function TabLaunchers() {
                   <div className="flex items-center gap-4">
                     <ImagePlay />
                     GIF mostrando como criar a instalação
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -172,6 +180,9 @@ export function TabLaunchers() {
                   <div className="flex items-center gap-4">
                     <ImagePlay />
                     GIF mostrando como verficar a quantidade de memória
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -227,6 +238,9 @@ export function TabLaunchers() {
                   <div className="flex items-center gap-4">
                     <ImagePlay />
                     GIF mostrando como baixar o Forge 1.20.1 - 47.4.0
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -251,6 +265,9 @@ export function TabLaunchers() {
                   <div className="flex items-center gap-4">
                     <ImagePlay />
                     GIF mostrando como é a instalação do Forge
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col items-center">
@@ -301,6 +318,9 @@ export function TabLaunchers() {
                   <div className="flex items-center gap-4">
                     <ImagePlay />
                     GIF mostrando como verficar a quantidade de memória
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>

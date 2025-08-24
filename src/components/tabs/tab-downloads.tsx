@@ -27,22 +27,22 @@ export function TabDownloads() {
       <Separator />
 
       <p className="font-semibold">
-        1. Baixe o arquivo .rar com tudo que é necessário para a primeira
+        1. Baixe o arquivo .zip com tudo que é necessário para a primeira
         instalação.
       </p>
       <LinkButton
         href={download.download_url}
-        text="Link para download do arquivo (.rar)"
-        label="Link para download do arquivo (.rar)"
+        text="Link para download do arquivo (.zip)"
+        label="Link para download do arquivo (.zip)"
       />
 
       <Separator />
 
       <p className="font-semibold">
-        2. O arquivo .rar baixado deve ser extraído na pasta .minecraft.
+        2. O arquivo .zip baixado deve ser extraído na pasta .minecraft.
       </p>
       <p>
-        O conteúdo do arquivo .rar deve substituir as pastas e arquivos
+        O conteúdo do arquivo .zip deve substituir as pastas e arquivos
         existentes. Se você já tiver mods instalados é importante remove-los da
         pasta &quot;mods&quot; para evitar conflitos.
       </p>
@@ -53,6 +53,9 @@ export function TabDownloads() {
             <div className="flex items-center gap-4">
               <ImagePlay />
               GIF mostrando como encontrar a .minecraft
+              <span className="animate-pulse font-light">
+                (Clique aqui para visualizar)
+              </span>
             </div>
           </AccordionTrigger>
           <AccordionContent className="flex flex-col items-center">
@@ -74,7 +77,10 @@ export function TabDownloads() {
           <AccordionTrigger>
             <div className="flex items-center gap-4">
               <ImagePlay />
-              GIF mostrando como extrair os arquivos do .rar
+              GIF mostrando como extrair os arquivos do .zip
+              <span className="animate-pulse font-light">
+                (Clique aqui para visualizar)
+              </span>
             </div>
           </AccordionTrigger>
           <AccordionContent>

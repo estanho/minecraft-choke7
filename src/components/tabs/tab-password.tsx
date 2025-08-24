@@ -32,6 +32,9 @@ export function TabPassword() {
             <div className="flex items-center gap-4">
               <ImagePlay />
               GIF mostrando como criar a senha
+              <span className="animate-pulse font-light">
+                (Clique aqui para visualizar)
+              </span>
             </div>
           </AccordionTrigger>
           <AccordionContent>

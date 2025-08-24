@@ -181,10 +181,17 @@ export default function App() {
               <h2>Arquivo de Download da Última Atualização</h2>
               <div>
                 <p>
-                  Só funciona se você já tiver realizada a primeira instalação!
-                  Download somente dos arquivos modificados pela última
-                  atualização. Sempre substitua a pasta &quot;mods&quot; por
-                  completo!
+                  ATENÇÃO: Só funciona se você já tiver realizado a primeira
+                  instalação! Download somente dos arquivos modificados pela
+                  última atualização. Para instalar é semelhante a primeira
+                  instalação, você deve extrair o conteúdo do arquivo baixado na
+                  pasta .minecraft.
+                </p>
+                <p>
+                  <span className="underline underline-offset-3">
+                    Aceite a substituição de todos os arquivos de configuração
+                    modificados!!!
+                  </span>
                 </p>
                 <div className="mt-4 max-w-fit">
                   <LinkButton
@@ -193,6 +200,13 @@ export default function App() {
                     label="Link para download da atualização"
                   />
                 </div>
+                <p className="mt-0 text-[14px]">
+                  O total de mods dentro da pasta .minecraft deve ser de{" "}
+                  <span className="underline underline-offset-3">
+                    {download.number_of_mods} mods
+                  </span>{" "}
+                  após a atualização.
+                </p>
               </div>
             </Card>
           </section>
