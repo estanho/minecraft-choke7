@@ -43,8 +43,12 @@ export function TabDownloads() {
       </p>
       <p>
         O conteúdo do arquivo .zip deve substituir as pastas e arquivos
-        existentes. Se você já tiver mods instalados é importante remove-los da
-        pasta &quot;mods&quot; para evitar conflitos.
+        existentes.{" "}
+        <span className="font-bold underline underline-offset-3">
+          Se você já tiver mods instalados é importante remove-los da pasta
+          &quot;mods&quot; para evitar conflitos
+        </span>
+        .
       </p>
 
       <Accordion id="appdata" type="multiple">
