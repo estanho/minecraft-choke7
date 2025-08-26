@@ -93,8 +93,8 @@ export function TabDownloads() {
               Estou utilizando o{" "}
               <LinkInline
                 href="https://www.win-rar.com/predownload.html?&L=9"
-                text="Winrar"
-                label="Link para o Winrar"
+                text="WinRAR"
+                label="Link para o WinRAR"
               />{" "}
               nesse caso.
             </p>
