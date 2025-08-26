@@ -30,7 +30,7 @@ export function CarouselMods() {
           mods.map((mod, index) => (
             <CarouselItem key={index} className="basis-1/3 lg:basis-1/9">
               <a href={mod.url} target="_blank" rel="noreferrer">
-                <Card className="flex h-full flex-col items-center justify-center gap-2 p-2">
+                <Card className="flex h-full flex-col items-center justify-center gap-2 p-2 select-none">
                   <img
                     src={mod.img_url}
                     className="h-14 w-14 rounded-md"
@@ -44,8 +44,8 @@ export function CarouselMods() {
             </CarouselItem>
           ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden lg:flex" />
-      <CarouselNext className="hidden lg:flex" />
+      <CarouselPrevious className="hidden cursor-pointer lg:flex" />
+      <CarouselNext className="hidden cursor-pointer lg:flex" />
     </Carousel>
   );
 }
