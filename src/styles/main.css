@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "@fontsource/press-start-2p";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/700.css";
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -8,11 +10,13 @@
 @font-face {
   font-family: Minecraftia;
   src: url("/fonts/Minecraftia.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Monocraft;
   src: url("/fonts/Monocraft.ttf") format("truetype");
+  font-display: swap;
 }
 
 @theme {
