@@ -30,6 +30,12 @@ export const mods: modInterface[] = [
       "https://media.forgecdn.net/avatars/thumbnails/909/606/64/64/638362844738980011.png",
   },
   {
+    name: "Brazilian Delight",
+    url: "https://www.curseforge.com/minecraft/mc-mods/braziliandelight",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/1071/559/64/64/638607121710723426.png",
+  },
+  {
     name: "Comforts",
     url: "https://www.curseforge.com/minecraft/mc-mods/comforts",
     img_url:
@@ -94,6 +100,12 @@ export const mods: modInterface[] = [
     url: "https://www.curseforge.com/minecraft/mc-mods/natures-compass",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/54/102/64/64/636131217371752080.png",
+  },
+  {
+    name: "PlayerRevive",
+    url: "https://www.curseforge.com/minecraft/mc-mods/playerrevive",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/97/938/64/64/636295724985402020.png",
   },
   {
     name: "Relics",
