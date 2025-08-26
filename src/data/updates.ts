@@ -9,11 +9,11 @@ interface updateInterface {
 
 export const updates: updateInterface[] = [
   {
-    date: "26/08/2025",
+    date: "??/08/2025",
     changes: [
       {
-        title: "✲ Inauguração do servidor?",
-        description: "Calma calabreso",
+        title: "✲ Inauguração do servidor",
+        description: "Falta pouco",
         dependency: [],
       },
     ],
