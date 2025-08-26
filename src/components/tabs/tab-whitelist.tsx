@@ -67,9 +67,10 @@ export function TabWhitelist() {
           )}
         </div>
       </div>
-      <p>
+      <p className="text-center font-semibold text-wrap">
         Após enviar a mensagem, aguarde um dos administradores entrar em contato
-        via privado do Discord com as orientações finais de conexão.
+        via privado do Discord com as orientações finais de conexão (Endereço de
+        conexão e etc).
       </p>
 
       <Separator />
