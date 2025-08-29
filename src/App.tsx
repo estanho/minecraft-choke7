@@ -133,7 +133,25 @@ export default function App() {
 
           <section id="orientations" className="mx-auto max-w-4xl">
             <Card>
-              <h2 ref={targetElement}>Tutorial para instalação</h2>
+              <h2>Tutorial para instalação</h2>
+              <div id="tutorial" className="space-y-4">
+                <h3>Tutorial em Vídeo</h3>
+                <p>
+                  Tutorial completo de como instalar e configurar o seu
+                  Minecraft para jogar no servidor sem problemas.
+                </p>
+                <div className="flex flex-col items-center justify-center">
+                  <iframe
+                    className="h-96 w-full rounded-lg border-1"
+                    src="https://www.youtube.com/embed/YnDn30lNWUw?si=4PAARMyB5L7T-cg-"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+              <h3 ref={targetElement}>Passo a Passo</h3>
               <Tabs
                 defaultValue="launchers"
                 value={value}
