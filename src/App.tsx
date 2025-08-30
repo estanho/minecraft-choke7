@@ -1,3 +1,4 @@
+import enxadahost from "@/assets/enxadahost.png";
 import headSkinChoke from "@/assets/head-skin-choke.png";
 import { CarouselMods } from "@/components/carousel-mods";
 import { ClickableSoundImage } from "@/components/jokes/clickable-sound-image";
@@ -62,6 +63,19 @@ export default function App() {
                 </p>
                 <div className="mt-6 flex items-center justify-center">
                   <NetworkButtons />
+                </div>
+                <div className="flex items-center justify-center">
+                  <a
+                    href="https://enxadahost.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <img
+                      src={enxadahost}
+                      alt="Logo da EnxadaHost"
+                      className="h-36 w-36 cursor-pointer rounded-full hover:animate-pulse"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
