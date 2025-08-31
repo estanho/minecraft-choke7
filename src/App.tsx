@@ -210,7 +210,24 @@ export default function App() {
 
           <section id="update-download" className="mx-auto max-w-4xl">
             <Card>
-              <h2>Arquivo de Download da Última Atualização</h2>
+              <h2>Download da Última Atualização</h2>
+              <div id="tutorial" className="space-y-4">
+                <h3>Tutorial sobre a atualização</h3>
+                <p>
+                  Tutorial feito pelo Tutti explicando como fazer a atualização.
+                </p>
+                <div className="flex flex-col items-center justify-center">
+                  <iframe
+                    className="h-96 w-full rounded-lg border-1"
+                    src="https://www.youtube.com/embed/cNrTvnWX0EY?si=tuT6xGp6i_aIeYnI"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+
               <div>
                 <p>
                   ATENÇÃO: Só funciona se você já tiver realizado a primeira
@@ -221,8 +238,7 @@ export default function App() {
                 </p>
                 <p>
                   <span className="underline underline-offset-3">
-                    Aceite a substituição de todos os arquivos de configuração
-                    modificados!!!
+                    Se solicitar a substituição de alguma arquivo, aceite.
                   </span>
                 </p>
                 <div className="mt-4 max-w-fit">
