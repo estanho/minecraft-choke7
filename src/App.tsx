@@ -212,10 +212,8 @@ export default function App() {
             <Card>
               <h2>Download da Última Atualização</h2>
               <div id="tutorial" className="space-y-4">
-                <h3>Tutorial sobre a atualização</h3>
-                <p>
-                  Tutorial feito pelo Tutti explicando como fazer a atualização.
-                </p>
+                <h3>Tutorial sobre a Atualização</h3>
+                <p>Tutorial feito pelo Tutti explicando como atualizar.</p>
                 <div className="flex flex-col items-center justify-center">
                   <iframe
                     className="h-96 w-full rounded-lg border-1"
