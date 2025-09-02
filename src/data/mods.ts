@@ -36,10 +36,22 @@ export const mods: modInterface[] = [
       "https://media.forgecdn.net/avatars/thumbnails/1071/559/64/64/638607121710723426.png",
   },
   {
+    name: "Camera Mod",
+    url: "https://www.curseforge.com/minecraft/mc-mods/camera-mod",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/144/334/64/64/636555258623630042.png",
+  },
+  {
     name: "Comforts",
     url: "https://www.curseforge.com/minecraft/mc-mods/comforts",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/203/105/64/64/636930549407382137.png",
+  },
+  {
+    name: "Comics Bubbles Chat",
+    url: "https://www.curseforge.com/minecraft/mc-mods/comics-bubbles-chat",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/961/733/64/64/638458279465293660.png",
   },
   {
     name: "Create",
