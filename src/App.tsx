@@ -17,9 +17,13 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UpdatesList } from "@/components/updates-list";
 import { download } from "@/data/download";
+import { useAlert } from "@/hooks/alert";
 import { useRef, useState } from "react";
+import { Toaster } from "sonner";
 
 export default function App() {
+  useAlert();
+
   const [value, setValue] = useState("launchers");
 
   const targetElement = useRef<HTMLDivElement>(null);
@@ -64,7 +68,7 @@ export default function App() {
                 <div className="mt-6 flex items-center justify-center">
                   <NetworkButtons />
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="mt-8 flex flex-col items-center justify-center">
                   <a
                     href="https://enxadahost.com/"
                     target="_blank"
@@ -73,9 +77,10 @@ export default function App() {
                     <img
                       src={enxadahost}
                       alt="Logo da EnxadaHost"
-                      className="h-36 w-36 cursor-pointer rounded-full hover:animate-pulse"
+                      className="w-36 cursor-pointer hover:animate-pulse"
                     />
                   </a>
+                  <span className="mt-2 text-center text-sm">Cupom: CHOKE</span>
                 </div>
               </div>
             </div>
@@ -147,12 +152,16 @@ export default function App() {
 
           <section id="orientations" className="mx-auto max-w-4xl">
             <Card>
-              <h2>Tutorial para instalação</h2>
+              <h2>Tutorial para Primeira Instalação</h2>
               <div id="tutorial" className="space-y-4">
                 <h3>Tutorial em Vídeo</h3>
                 <p>
-                  Tutorial completo de como instalar e configurar o seu
-                  Minecraft para jogar no servidor sem problemas.
+                  Tutorial rápido de como instalar e configurar o seu Minecraft
+                  para jogar no servidor.
+                </p>
+                <p className="underline underline-offset-3">
+                  Veja o Passo a Passo abaixo para uma explicação mais
+                  detalhada.
                 </p>
                 <div className="flex flex-col items-center justify-center">
                   <iframe
@@ -166,6 +175,16 @@ export default function App() {
                 </div>
               </div>
               <h3 ref={targetElement}>Passo a Passo</h3>
+              <p className="mt-0">
+                Leia tudo com atenção, é importante! Caso tenha alguma dúvida,
+                entre em contato com os admins no{" "}
+                <LinkInline
+                  href="https://discord.gg/cc5f88JyMp"
+                  text="Discord"
+                  label="Link para o Discord da Choke7"
+                />
+                .
+              </p>
               <Tabs
                 defaultValue="launchers"
                 value={value}
@@ -212,8 +231,11 @@ export default function App() {
             <Card>
               <h2>Download da Última Atualização</h2>
               <div id="tutorial" className="space-y-4">
-                <h3>Tutorial sobre a Atualização</h3>
-                <p>Tutorial feito pelo Tutti explicando como atualizar.</p>
+                <h3>Tutorial em Vídeo</h3>
+                <p>
+                  Tutorial feito pelo Tutti explicando como atualizar se você já
+                  tiver realizado a primeira instalação.
+                </p>
                 <div className="flex flex-col items-center justify-center">
                   <iframe
                     className="h-96 w-full rounded-lg border-1"
@@ -228,31 +250,36 @@ export default function App() {
 
               <div>
                 <p>
-                  ATENÇÃO: Só funciona se você já tiver realizado a primeira
-                  instalação! Download somente dos arquivos modificados pela
-                  última atualização. Para instalar é semelhante a primeira
-                  instalação, você deve extrair o conteúdo do arquivo baixado na
-                  pasta .minecraft.
+                  <span className="font-bold">ATENÇÃO:</span> Só funciona se
+                  você já tiver realizado a primeira instalação!
                 </p>
                 <p>
-                  <span className="underline underline-offset-3">
-                    Se solicitar a substituição de alguma arquivo, aceite.
+                  Download somente dos arquivos modificados pela última
+                  atualização. Para instalar é semelhante a primeira instalação,
+                  você deve extrair o conteúdo do arquivo baixado na pasta{" "}
+                  <span className="font-bold underline underline-offset-3">
+                    .minecraft
                   </span>
+                  .
                 </p>
-                <div className="mt-4 max-w-fit">
-                  <LinkButton
-                    href={download.last_update_url}
-                    text="Download da atualização"
-                    label="Link para download da atualização"
-                  />
-                </div>
-                <p className="mt-0 text-[14px]">
-                  O total de mods dentro da pasta .minecraft deve ser de{" "}
-                  <span className="underline underline-offset-3">
+                <p>
+                  O total de mods dentro da pasta{" "}
+                  <span className="font-bold underline underline-offset-3">
+                    .minecraft
+                  </span>{" "}
+                  deve ser de{" "}
+                  <span className="font-bold underline underline-offset-3">
                     {download.number_of_mods} mods
                   </span>{" "}
                   após a atualização.
                 </p>
+                <div className="mt-4 max-w-fit">
+                  <LinkButton
+                    href={download.last_update_url}
+                    text="Download da Atualização"
+                    label="Link para download da atualização"
+                  />
+                </div>
               </div>
             </Card>
           </section>
@@ -278,6 +305,8 @@ export default function App() {
           .
         </p>
       </footer>
+
+      <Toaster />
     </div>
   );
 }

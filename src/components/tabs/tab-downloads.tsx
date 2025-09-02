@@ -17,7 +17,7 @@ export function TabDownloads() {
   return (
     <>
       <h3>Downloads</h3>
-      <h4>Primeira Instalação</h4>
+      <h4>Instalando os mods, emotes e arquivos de configuração</h4>
       <p>
         O servidor possui diversos mods e configurações que devem ser instaladas
         no seu Minecraft. Siga o passo a passo abaixo para instalar todos os
@@ -117,24 +117,39 @@ export function TabDownloads() {
       <Separator className="my-6" />
 
       <h4>Shaders (Opcional)</h4>
-      <p>
-        Se quiser utilizar shaders, basta baixar o shader e colocar o arquivo
-        diretamente na pasta &apos;shaderpacks&apos; dentro da pasta .minecraft.
-      </p>
-      <p>Recomendações de shaders bacanas:</p>
+      <Accordion id="shaders" type="multiple">
+        <AccordionItem value="shaders">
+          <AccordionTrigger>Recomendações de Shaders</AccordionTrigger>
+          <AccordionContent>
+            <p>
+              Se quiser utilizar shaders, basta baixar o shader e colocar o
+              arquivo diretamente na pasta{" "}
+              <span className="font-bold underline underline-offset-3">
+                shaderpacks
+              </span>{" "}
+              dentro da pasta{" "}
+              <span className="font-bold underline underline-offset-3">
+                .minecraft
+              </span>
+              .
+            </p>
+            <p>Recomendações de shaders bacanas:</p>
 
-      <div className="mt-4 flex max-w-fit flex-col">
-        <LinkButton
-          href="https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/all?page=1&pageSize=20&version=1.20.1"
-          text="Download Complementary Shaders"
-          label="Link para download do Shader Complementary Shaders - Unbound"
-        />
-        <LinkButton
-          href="https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/all?page=1&pageSize=20&version=1.20.1"
-          text="Download Sildurs Vibrant Shaders"
-          label="Link para download do Shader Sildurs Vibrant Shaders"
-        />
-      </div>
+            <div className="mt-4 flex max-w-fit flex-col">
+              <LinkButton
+                href="https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/all?page=1&pageSize=20&version=1.20.1"
+                text="Download Complementary Shaders"
+                label="Link para download do Shader Complementary Shaders - Unbound"
+              />
+              <LinkButton
+                href="https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/all?page=1&pageSize=20&version=1.20.1"
+                text="Download Sildurs Vibrant Shaders"
+                label="Link para download do Shader Sildurs Vibrant Shaders"
+              />
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
 
       <Separator />
 

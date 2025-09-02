@@ -25,6 +25,11 @@ export function TabPassword() {
         vez que conseguiu entrar no servidor. Assim protegendo o seu acesso e
         não deixando ninguém entrar utilizando o seu nick e sua whitelist.
       </p>
+      <p className="font-bold underline underline-offset-3">
+        IMPORTANTE: Essa senha fica salva na sua pasta .minecraft em um arquivo
+        chamado &apos;.sl_password&apos;. Caso precise reinstalar o minecraft,
+        SALVE ESSE ARQUIVO!
+      </p>
 
       <Accordion id="password" type="multiple">
         <AccordionItem value="password">
@@ -39,16 +44,10 @@ export function TabPassword() {
           </AccordionTrigger>
           <AccordionContent>
             <p className="text-base">
-              Você não precisa lembrar dessa senha, ela é utilizada pelo mod
-              automaticamente quando você entra no servidor.
+              Você não vai precisar digitar essa senha em nenhum momento, ela é
+              utilizada pelo mod automaticamente quando você entra no servidor.
             </p>
             <ModalImg src={password} alt="GIF mostrando como criar a senha" />
-
-            <p className="mt-2 text-center text-sm italic">
-              Essa senha fica salva na sua pasta .minecraft em um arquivo
-              chamado &apos;.sl_password&apos;. NÃO PASSE ESSE ARQUIVO PARA
-              NINGUÉM!
-            </p>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
