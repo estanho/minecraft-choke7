@@ -7,8 +7,8 @@ interface Alert {
 
 export const alert: Alert = {
   enable: true,
-  title: "Servidor Offline!",
+  title: "Servidor Online para testes!",
   description:
-    "O servidor está com um problema que estamos tentando identificar ainda. Peço que aguardem.",
+    "O servidor está com um erro que estamos tentando identificar ainda junto com a equipe do EnxadaHost. O Servidor foi iniciado porém ainda está ocorrendo instabilidades. Pedimos desculpas pelo inconveniente.",
   duration: 60000,
 };
