@@ -7,8 +7,8 @@ interface Alert {
 
 export const alert: Alert = {
   enable: true,
-  title: "Servidor está passando por testes!",
+  title: "Servidor está passando por algumas mudanças!",
   description:
-    "O servidor está com um erro que estamos tentando identificar ainda junto com a equipe do EnxadaHost. Pedimos desculpas pelo inconveniente.",
+    "Estamos verificando a possibilidade de atualizar/refazer o modpack para melhorar o desempenho do servidor. Infelizmente até conseguirmos corrigir todos os problemas, o servidor vai continuar com bastante instabilidade. Pedimos desculpas pelo inconveniente.",
   duration: 60000,
 };
