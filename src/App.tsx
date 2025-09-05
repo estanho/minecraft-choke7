@@ -230,6 +230,7 @@ export default function App() {
           <section id="update-download" className="mx-auto max-w-4xl">
             <Card>
               <h2>Download da Última Atualização</h2>
+              {/* 
               <div id="tutorial" className="space-y-4">
                 <h3>Tutorial em Vídeo</h3>
                 <p>
@@ -247,6 +248,7 @@ export default function App() {
                   ></iframe>
                 </div>
               </div>
+              */}
 
               <div>
                 <p>
@@ -254,9 +256,21 @@ export default function App() {
                   você já tiver realizado a primeira instalação!
                 </p>
                 <p>
-                  Download somente dos arquivos modificados pela última
-                  atualização. Para instalar é semelhante a primeira instalação,
-                  você deve extrair o conteúdo do arquivo baixado na pasta{" "}
+                  <span className="font-bold underline underline-offset-3">
+                    VOCÊ DEVE EXCLUIR TOTALMENTE TODOS OS ARQUIVOS DA SUA PASTA
+                    &quot;MODS&quot; NA PASTA .MINECRAFT.
+                  </span>
+                </p>
+                <p>
+                  Os mods foram atualizados e alguns removidos.{" "}
+                  <span className="font-bold underline underline-offset-3">
+                    É importante não manter nenhum mod antigo!
+                  </span>
+                </p>
+                <p>
+                  Download da nova pasta mods. Para instalar é semelhante a
+                  primeira instalação, você deve extrair o conteúdo do arquivo
+                  baixado na pasta{" "}
                   <span className="font-bold underline underline-offset-3">
                     .minecraft
                   </span>

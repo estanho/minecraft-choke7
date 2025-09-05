@@ -12,12 +12,6 @@ export const mods: modInterface[] = [
       "https://media.forgecdn.net/avatars/thumbnails/816/783/64/64/638194171174203953.png",
   },
   {
-    name: "Alex's Mobs",
-    url: "https://www.curseforge.com/minecraft/mc-mods/alexs-mobs",
-    img_url:
-      "https://media.forgecdn.net/avatars/thumbnails/543/777/64/64/637874731161865623.jpeg",
-  },
-  {
     name: "Artifacts",
     url: "https://www.curseforge.com/minecraft/mc-mods/artifacts",
     img_url:
