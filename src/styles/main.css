@@ -154,23 +154,23 @@
   }
 
   h1 {
-    @apply scroll-m-20 text-center text-3xl/tight lg:text-5xl/tight font-extrabold text-balance;
+    @apply scroll-m-20 text-center text-3xl/tight lg:text-5xl/tight font-extrabold text-balance opacity-95;
   }
 
   h2 {
-    @apply scroll-m-20 border-b pb-2 text-balance text-center text-3xl font-semibold first:mt-0;
+    @apply scroll-m-20 border-b pb-2 text-balance text-center text-3xl font-semibold first:mt-0 opacity-95;
   }
 
   h3 {
-    @apply scroll-m-20 text-2xl font-semibold;
+    @apply scroll-m-20 text-2xl font-semibold opacity-95;
   }
 
   h4 {
-    @apply scroll-m-20 text-xl font-semibold;
+    @apply scroll-m-20 text-xl font-semibold opacity-95;
   }
 
   p {
-    @apply text-base leading-7 [&:not(:first-child)]:mt-6;
+    @apply text-base leading-7 [&:not(:first-child)]:mt-6 opacity-95;
   }
 
   ul {

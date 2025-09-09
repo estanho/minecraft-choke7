@@ -1,6 +1,7 @@
 import enxadahost from "@/assets/enxadahost.png";
 import headSkinChoke from "@/assets/head-skin-choke.png";
 import { CarouselMods } from "@/components/carousel-mods";
+import { Gallery } from "@/components/gallery";
 import { ClickableSoundImage } from "@/components/jokes/clickable-sound-image";
 import { LinkButton } from "@/components/links/link-button";
 import { LinkInline } from "@/components/links/link-inline";
@@ -103,6 +104,13 @@ export default function App() {
                 className="bg-card absolute -end-6 -top-6 m-2 h-12 w-12 rounded-3xl border-1 p-2 hover:animate-spin dark:bg-[#121a0d]"
               />
               <ServerStatus />
+            </Card>
+          </section>
+
+          <section id="gallery" className="mx-auto max-w-4xl">
+            <Card>
+              <h2>Galeria</h2>
+              <Gallery />
             </Card>
           </section>
 
