@@ -276,9 +276,8 @@ export default function App() {
                   </span>
                 </p>
                 <p>
-                  Download da nova pasta mods. Para instalar é semelhante a
-                  primeira instalação, você deve extrair o conteúdo do arquivo
-                  baixado na pasta{" "}
+                  Para instalar é semelhante a primeira instalação, você deve
+                  extrair o conteúdo do arquivo baixado na pasta{" "}
                   <span className="font-bold underline underline-offset-3">
                     .minecraft
                   </span>
