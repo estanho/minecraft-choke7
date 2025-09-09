@@ -28,7 +28,7 @@ export function Gallery() {
                   <AspectRatio ratio={16 / 9}>
                     <ModalImg
                       src={image.image}
-                      alt={`Imagem da galeria ${index}`}
+                      alt={`Imagem da Galeria: Foto ${index + 1}`}
                     />
                   </AspectRatio>
                 </CarouselItem>
