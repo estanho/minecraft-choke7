@@ -35,8 +35,10 @@ export function ServerStatus() {
     const anonymousPlayersCount = online - listedPlayersCount;
 
     if (anonymousPlayersCount > 0) {
-      for (let i = 0; i < anonymousPlayersCount; i++) {
+      if (anonymousPlayersCount == 1) {
         result.push("Player Anônimo");
+      } else {
+        result.push(`... ${anonymousPlayersCount} Players Anônimos`);
       }
     }
 
