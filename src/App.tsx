@@ -1,9 +1,9 @@
 import enxadahost from "@/assets/enxadahost.png";
 import headSkinChoke from "@/assets/head-skin-choke.png";
 import { CarouselMods } from "@/components/carousel-mods";
+import { DownloadUpdate } from "@/components/download-update";
 import { Gallery } from "@/components/gallery";
 import { ClickableSoundImage } from "@/components/jokes/clickable-sound-image";
-import { LinkButton } from "@/components/links/link-button";
 import { LinkInline } from "@/components/links/link-inline";
 import { ModeToggle } from "@/components/mode-toggle";
 import { NetworkButtons } from "@/components/network-buttons";
@@ -17,7 +17,6 @@ import { TabWhitelist } from "@/components/tabs/tab-whitelist";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UpdatesList } from "@/components/updates-list";
-import { download } from "@/data/download";
 import { useAlert } from "@/hooks/alert";
 import { useRef, useState } from "react";
 import { Toaster } from "sonner";
@@ -238,70 +237,7 @@ export default function App() {
           <section id="update-download" className="mx-auto max-w-4xl">
             <Card>
               <h2>Download da Última Atualização</h2>
-              {/* 
-              <div id="tutorial" className="space-y-4">
-                <h3>Tutorial em Vídeo</h3>
-                <p>
-                  Tutorial feito pelo Tutti explicando como atualizar se você já
-                  tiver realizado a primeira instalação.
-                </p>
-                <div className="flex flex-col items-center justify-center">
-                  <iframe
-                    className="h-96 w-full rounded-lg border-1"
-                    src="https://www.youtube.com/embed/cNrTvnWX0EY?si=tuT6xGp6i_aIeYnI"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-              */}
-
-              <div>
-                <p>
-                  <span className="font-bold">ATENÇÃO:</span> Só funciona se
-                  você já tiver realizado a primeira instalação!
-                </p>
-                <p>
-                  <span className="font-bold underline underline-offset-3">
-                    VOCÊ DEVE EXCLUIR TOTALMENTE TODOS OS ARQUIVOS DA SUA PASTA
-                    &quot;MODS&quot; NA PASTA .MINECRAFT.
-                  </span>
-                </p>
-                <p>
-                  Os mods foram atualizados e alguns removidos.{" "}
-                  <span className="font-bold underline underline-offset-3">
-                    É importante não manter nenhum mod antigo!
-                  </span>
-                </p>
-                <p>
-                  Para instalar é semelhante a primeira instalação, você deve
-                  extrair o conteúdo do arquivo baixado na pasta{" "}
-                  <span className="font-bold underline underline-offset-3">
-                    .minecraft
-                  </span>
-                  .
-                </p>
-                <p>
-                  O total de mods dentro da pasta{" "}
-                  <span className="font-bold underline underline-offset-3">
-                    .minecraft
-                  </span>{" "}
-                  deve ser de{" "}
-                  <span className="font-bold underline underline-offset-3">
-                    {download.number_of_mods} mods
-                  </span>{" "}
-                  após a atualização.
-                </p>
-                <div className="mt-4 max-w-fit">
-                  <LinkButton
-                    href={download.last_update_url}
-                    text="Download da Atualização"
-                    label="Link para download da atualização"
-                  />
-                </div>
-              </div>
+              <DownloadUpdate />
             </Card>
           </section>
 
@@ -317,7 +253,7 @@ export default function App() {
       <footer className="text-foreground/80 mt-8 p-8 text-center">
         <p className="font-semibold">
           © {new Date().getFullYear()}
-          {" Equipe da Lagoa Azul e "}
+          {" Desenvolvido por "}
           <LinkInline
             href="https://pedrohrg.vercel.app/"
             text="Estanho"

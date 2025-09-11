@@ -1,4 +1,4 @@
-interface updateInterface {
+interface IUpdates {
   date: string;
   changes: {
     title: string;
@@ -7,7 +7,21 @@ interface updateInterface {
   }[];
 }
 
-export const updates: updateInterface[] = [
+export const updates: IUpdates[] = [
+  {
+    date: "11/09/2025",
+    changes: [
+      {
+        title: "+ Adicionados mods para melhorar a experiência do jogo.",
+        description: "Nova pasta mods",
+        dependency: [
+          "+ Mod de armazenamento de itens e organização.",
+          "+ Mod para facilitar configuração dos atalhos.",
+          "+ ...",
+        ],
+      },
+    ],
+  },
   {
     date: "04/09/2025",
     changes: [

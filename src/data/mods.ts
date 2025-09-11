@@ -1,10 +1,10 @@
-interface modInterface {
+interface IMods {
   name: string;
   url: string;
   img_url: string;
 }
 
-export const mods: modInterface[] = [
+export const mods: IMods[] = [
   {
     name: "Aether",
     url: "https://www.curseforge.com/minecraft/mc-mods/aether",
@@ -148,6 +148,12 @@ export const mods: modInterface[] = [
     url: "https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/14/212/64/64/635589178760357568.png",
+  },
+  {
+    name: "Tom's Simple Storage Mod",
+    url: "https://www.curseforge.com/minecraft/mc-mods/toms-storage",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/266/898/64/64/637234057062921445.png",
   },
   {
     name: "Waterframes",
