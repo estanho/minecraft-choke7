@@ -1,4 +1,9 @@
 import { Badge } from "@/components/ui/badge";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { updates } from "@/data/updates";
 
 export function UpdatesList() {
@@ -6,29 +11,36 @@ export function UpdatesList() {
     <>
       {updates.map((update, index) => {
         return (
-          <div key={index}>
-            <div className="flex items-center gap-3">
-              <span className="text-lg font-bold">{update.date}</span>
-              {index === 0 && <Badge>Novo</Badge>}
-            </div>
-            {update.changes.map((change) => {
+          <Collapsible
+            key={index}
+            className={`rounded-2xl border-1 ${update.existsDependency && "bg-background/30 border-2"}`}
+          >
+            <CollapsibleTrigger
+              className={`flex w-full flex-col items-start gap-1 p-3 ${update.existsDependency && "cursor-pointer"}`}
+              disabled={!update.existsDependency}
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-lg font-bold">{update.date}</span>
+                {index === 0 && <Badge>Novo</Badge>}
+              </div>
+              <span className="font-bold">
+                {update.changes[0].title} ({update.changes[0].description})
+              </span>
+            </CollapsibleTrigger>
+            {update.changes.map((change, index) => {
               return (
-                <ul key={change.title}>
-                  <li className="m-0 text-base">
-                    <span className="font-bold">{change.title}</span> (
-                    {change.description})
-                    {change.dependency.map((value, index) => {
-                      return (
-                        <ul key={index}>
-                          <li className="m-0 text-sm italic">{value}</li>
-                        </ul>
-                      );
-                    })}
-                  </li>
-                </ul>
+                <CollapsibleContent key={index} className="p-3 pt-0">
+                  {change.dependency.map((value, index) => {
+                    return (
+                      <ul key={index} className="list-none">
+                        <li className="m-0 text-sm italic">{value}</li>
+                      </ul>
+                    );
+                  })}
+                </CollapsibleContent>
               );
             })}
-          </div>
+          </Collapsible>
         );
       })}
     </>
