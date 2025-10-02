@@ -125,7 +125,6 @@ export default function App() {
                   </li>
                   <li>Minecraft Java 1.20.1 - Forge (47.4.0).</li>
                   <li>Servidor dedicado (24/7).</li>
-                  <li>Backup realizado todos os dias durante a madrugada.</li>
                 </ul>
               </div>
             </Card>
@@ -142,11 +141,11 @@ export default function App() {
                   </li>
                   <li>Não abuse de bugs e não utilize trapaças!</li>
                 </ul>
-                <p className="text-lg font-bold underline underline-offset-3">
+                <p className="text-lg font-bold">
                   Desrespeitar as regras acarretará em punições no server e na
                   live.
                 </p>
-                <p className="mt-0">
+                <p className="mt-0 text-sm">
                   Qualquer problema ou denúncia, converse com os administradores
                   no Discord.
                 </p>
@@ -166,7 +165,7 @@ export default function App() {
                   Tutorial rápido de como instalar e configurar o seu Minecraft
                   para jogar no servidor.
                 </p>
-                <p className="underline underline-offset-3">
+                <p className="font-bold">
                   Veja o Passo a Passo abaixo para uma explicação mais
                   detalhada.
                 </p>

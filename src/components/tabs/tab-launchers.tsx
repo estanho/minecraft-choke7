@@ -39,169 +39,6 @@ export function TabLaunchers() {
         em outros launchers).
       </p>
       <Accordion id="launchers" type="multiple" className="space-y-2">
-        {/* SKLauncher */}
-        <AccordionItem value="sklauncher">
-          <AccordionTrigger>
-            <div id="accordion-trigger">
-              <img
-                src="/images/launchers/logo-sklauncher.png"
-                alt="Logo do SKLauncher"
-              />
-              <span>SKLauncher (Recomendado)</span>
-            </div>
-          </AccordionTrigger>
-          <AccordionContent className="mt-4 space-y-4">
-            <h4>SKLauncher</h4>
-            <p>
-              O SKLauncher é um launcher alternativo para o Minecraft para
-              Windows, Linux e MacOS. Ele possui muitos recursos para facilitar
-              suas jogatinas no jogo quadrado.
-            </p>
-
-            <Separator />
-
-            <p className="font-semibold">
-              1. Para instalar o SKLauncher, basta baixar o instalador no site
-              do launcher. A instalação é bem simples e já vem com o Java junto.
-            </p>
-            <LinkButton
-              href="https://skmedix.pl/downloads"
-              text="Baixar o Sklauncher"
-              label="Link para download do SKLauncher"
-            />
-
-            <Accordion id="download-sklauncher" type="multiple">
-              <AccordionItem value="download-sklauncher">
-                <AccordionTrigger>
-                  <div className="flex items-center gap-4">
-                    <Image />
-                    Imagem mostrando onde baixar o SKLauncher
-                    <span className="animate-pulse font-light">
-                      (Clique aqui para visualizar)
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ModalImg
-                    src={sklauncher}
-                    alt="Imagem mostrando onde baixar o SKLauncher"
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <Separator />
-
-            <p className="font-semibold">
-              2. Após baixar e instalar, tente iniciar o launcher para ver se
-              tudo foi instalado corretamente.
-            </p>
-
-            <Separator />
-
-            <p className="font-semibold">
-              3. Quando abrir o SKLauncher pela primeira vez você vai conseguir
-              selecionar o seu username no launcher.
-            </p>
-            <p>
-              Para isso, clique no botão &apos;Mudar para modo offline&apos; no
-              canto inferior esquerdo e depois digite o username que você deseja
-              utilizar no jogo.
-            </p>
-
-            <Accordion id="username-sklauncher" type="multiple">
-              <AccordionItem value="username-sklauncher">
-                <AccordionTrigger>
-                  <div className="flex items-center gap-4">
-                    <ImagePlay />
-                    GIF mostrando como selecionar o username
-                    <span className="animate-pulse font-light">
-                      (Clique aqui para visualizar)
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ModalImg
-                    src={sklauncher1}
-                    alt="GIF mostrando como selecionar o username"
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <Separator />
-
-            <p className="font-semibold">
-              4. Ao entrar na tela inicial do launcher, você vai precisar criar
-              uma &apos;instalação&apos; para iniciar o jogo na versão correta.
-            </p>
-            <p>
-              Para isso, clique no botão de + ao lado da opção de
-              &apos;Gerenciar Instalações&apos;. Na próxima tela, digite um nome
-              para a instalação e selecione em &quot;Versão&quot;, a opção
-              &apos;Forge&apos;, &apos;1.20.1&apos; e &apos;47.4.0&apos;.
-            </p>
-
-            <Accordion id="installation-sklauncher" type="multiple">
-              <AccordionItem value="installation-sklauncher">
-                <AccordionTrigger>
-                  <div className="flex items-center gap-4">
-                    <ImagePlay />
-                    GIF mostrando como criar a instalação
-                    <span className="animate-pulse font-light">
-                      (Clique aqui para visualizar)
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ModalImg
-                    src={sklauncher2}
-                    alt="GIF mostrando como criar a instalação"
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <Separator />
-
-            <p className="font-semibold">
-              5. É interessante nesse momento verificar se o jogo vai utilizar
-              pelo menos 4GB de RAM.
-            </p>
-            <p>
-              Logo abaixo das opções de versão selecione &quot;Mais opções&quot;
-              e verifique a quantidade de memória máxima que o jogo vai
-              utilizar, isso pode ser alterado porém 4GB é o suficiente.
-            </p>
-
-            <Accordion id="performance-sklauncher" type="multiple">
-              <AccordionItem value="performance-sklauncher">
-                <AccordionTrigger>
-                  <div className="flex items-center gap-4">
-                    <ImagePlay />
-                    GIF mostrando como verficar a quantidade de memória
-                    <span className="animate-pulse font-light">
-                      (Clique aqui para visualizar)
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ModalImg
-                    src={sklauncher3}
-                    alt="GIF mostrando como verificar a quantidade de memória"
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <Separator />
-
-            <p className="font-semibold">
-              6. Depois de tudo, clique em &quot;Salvar&quot; e você vai ter
-              criado a instalação configurada para o Minecraft. 🎉
-            </p>
-          </AccordionContent>
-        </AccordionItem>
         {/* Minecraft Original */}
         <AccordionItem value="original">
           <AccordionTrigger>
@@ -301,7 +138,7 @@ export function TabLaunchers() {
 
             <p className="font-semibold">
               5. É interessante nesse momento verificar se o jogo vai utilizar
-              pelo menos 4GB de RAM.
+              pelo menos 6GB de RAM.
             </p>
             <p>
               No menu de edição da instalação do Forge você deve selecionar a
@@ -309,7 +146,7 @@ export function TabLaunchers() {
               de memória máxima para o Minecraft. A quantidade de memória está
               na linha de &quot;Argumentos da JVM&quot; e fica no começo da
               linha com &quot;-Xmx2G ...&quot;. Para aumentar você deve alterar
-              para &quot;-Xmx4G ...&quot;.
+              para &quot;-Xmx6G ...&quot;.
             </p>
 
             <Accordion id="performance-original" type="multiple">
@@ -337,6 +174,169 @@ export function TabLaunchers() {
             <p className="font-semibold">
               6. Depois de tudo, você vai ter feito a configuração do launcher
               para o servidor. 🎉
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        {/* SKLauncher */}
+        <AccordionItem value="sklauncher">
+          <AccordionTrigger>
+            <div id="accordion-trigger">
+              <img
+                src="/images/launchers/logo-sklauncher.png"
+                alt="Logo do SKLauncher"
+              />
+              <span>SKLauncher (Launcher alternativo)</span>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="mt-4 space-y-4">
+            <h4>SKLauncher</h4>
+            <p>
+              O SKLauncher é um launcher alternativo para o Minecraft para
+              Windows, Linux e MacOS. Ele possui muitos recursos para facilitar
+              suas jogatinas no jogo quadrado.
+            </p>
+
+            <Separator />
+
+            <p className="font-semibold">
+              1. Para instalar o SKLauncher, basta baixar o instalador no site
+              do launcher. A instalação é bem simples e já vem com o Java junto.
+            </p>
+            <LinkButton
+              href="https://skmedix.pl/downloads"
+              text="Baixar o Sklauncher"
+              label="Link para download do SKLauncher"
+            />
+
+            <Accordion id="download-sklauncher" type="multiple">
+              <AccordionItem value="download-sklauncher">
+                <AccordionTrigger>
+                  <div className="flex items-center gap-4">
+                    <Image />
+                    Imagem mostrando onde baixar o SKLauncher
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ModalImg
+                    src={sklauncher}
+                    alt="Imagem mostrando onde baixar o SKLauncher"
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Separator />
+
+            <p className="font-semibold">
+              2. Após baixar e instalar, tente iniciar o launcher para ver se
+              tudo foi instalado corretamente.
+            </p>
+
+            <Separator />
+
+            <p className="font-semibold">
+              3. Quando abrir o SKLauncher pela primeira vez você vai conseguir
+              selecionar o seu username no launcher.
+            </p>
+            <p>
+              Para isso, clique no botão &quot;Mudar para modo offline&quot; no
+              canto inferior esquerdo e depois digite o username que você deseja
+              utilizar no jogo.
+            </p>
+
+            <Accordion id="username-sklauncher" type="multiple">
+              <AccordionItem value="username-sklauncher">
+                <AccordionTrigger>
+                  <div className="flex items-center gap-4">
+                    <ImagePlay />
+                    GIF mostrando como selecionar o username
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ModalImg
+                    src={sklauncher1}
+                    alt="GIF mostrando como selecionar o username"
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Separator />
+
+            <p className="font-semibold">
+              4. Ao entrar na tela inicial do launcher, você vai precisar criar
+              uma &quot;instalação&quot; para iniciar o jogo na versão correta.
+            </p>
+            <p>
+              Para isso, clique no botão de + ao lado da opção de
+              &quot;Gerenciar Instalações&quot;. Na próxima tela, digite um nome
+              para a instalação e selecione em &quot;Versão&quot;, a opção
+              &quot;Forge&quot;, &quot;1.20.1&quot; e &quot;47.4.0&quot;.
+            </p>
+
+            <Accordion id="installation-sklauncher" type="multiple">
+              <AccordionItem value="installation-sklauncher">
+                <AccordionTrigger>
+                  <div className="flex items-center gap-4">
+                    <ImagePlay />
+                    GIF mostrando como criar a instalação
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ModalImg
+                    src={sklauncher2}
+                    alt="GIF mostrando como criar a instalação"
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Separator />
+
+            <p className="font-semibold">
+              5. É interessante nesse momento verificar se o jogo vai utilizar
+              pelo menos 6GB de RAM.
+            </p>
+            <p>
+              Logo abaixo das opções de versão selecione &quot;Mais opções&quot;
+              e verifique a quantidade de memória máxima que o jogo vai
+              utilizar.
+            </p>
+
+            <Accordion id="performance-sklauncher" type="multiple">
+              <AccordionItem value="performance-sklauncher">
+                <AccordionTrigger>
+                  <div className="flex items-center gap-4">
+                    <ImagePlay />
+                    GIF mostrando como verficar a quantidade de memória
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ModalImg
+                    src={sklauncher3}
+                    alt="GIF mostrando como verificar a quantidade de memória"
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Separator />
+
+            <p className="font-semibold">
+              6. Clique em &quot;Salvar&quot; e você vai ter criado a instalação
+              configurada para o Minecraft. 🎉
             </p>
           </AccordionContent>
         </AccordionItem>
