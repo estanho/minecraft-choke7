@@ -138,7 +138,7 @@ export function TabLaunchers() {
 
             <p className="font-semibold">
               5. É interessante nesse momento verificar se o jogo vai utilizar
-              pelo menos 6GB de RAM alocada para o Minecraft.
+              pelo menos 4-5GB de RAM alocada para o Minecraft.
             </p>
             <p>
               No menu de edição da instalação do Forge você deve selecionar a
@@ -146,8 +146,8 @@ export function TabLaunchers() {
               de memória máxima para o Minecraft. A quantidade de memória está
               na linha de &quot;Argumentos da JVM&quot; e fica no começo da
               linha com &quot;-Xmx2G ...&quot;. Para aumentar você deve alterar
-              para &quot;-Xmx6G ...&quot;. Recomendado utilizar no mínimo 6GB de
-              RAM.
+              para &quot;-Xmx6G ...&quot;. Recomendado utilizar no mínimo entre
+              4-5GB de RAM.
             </p>
 
             <Accordion id="performance-original" type="multiple">
@@ -305,12 +305,12 @@ export function TabLaunchers() {
 
             <p className="font-semibold">
               5. É interessante nesse momento verificar se o jogo vai utilizar
-              pelo menos 6GB de RAM alocada para o Minecraft.
+              pelo menos 4-5GB de RAM alocada para o Minecraft.
             </p>
             <p>
               Logo abaixo das opções de versão selecione &quot;Mais opções&quot;
               e verifique a quantidade de memória máxima que o jogo vai
-              utilizar. Recomendado utilizar no mínimo 6GB de RAM.
+              utilizar. Recomendado utilizar no mínimo entre 4-5GB de RAM.
             </p>
 
             <Accordion id="performance-sklauncher" type="multiple">

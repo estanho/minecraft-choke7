@@ -6,16 +6,16 @@ interface IMods {
 
 export const mods: IMods[] = [
   {
-    name: "Aether",
-    url: "https://www.curseforge.com/minecraft/mc-mods/aether",
-    img_url:
-      "https://media.forgecdn.net/avatars/thumbnails/816/783/64/64/638194171174203953.png",
-  },
-  {
     name: "Artifacts",
     url: "https://www.curseforge.com/minecraft/mc-mods/artifacts",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/444/622/64/64/637699815276651872.png",
+  },
+  {
+    name: "Biomes O' Plenty",
+    url: "https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/477/194/64/64/637771671789296797.png",
   },
   {
     name: "Bosses of Mass Destruction",
@@ -36,6 +36,12 @@ export const mods: IMods[] = [
       "https://media.forgecdn.net/avatars/thumbnails/144/334/64/64/636555258623630042.png",
   },
   {
+    name: "Chipped",
+    url: "https://www.curseforge.com/minecraft/mc-mods/chipped",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/495/254/64/64/637808243655328652_animated.gif",
+  },
+  {
     name: "Comforts",
     url: "https://www.curseforge.com/minecraft/mc-mods/comforts",
     img_url:
@@ -54,22 +60,28 @@ export const mods: IMods[] = [
       "https://media.forgecdn.net/avatars/thumbnails/1065/184/64/64/638598725500886388.png",
   },
   {
+    name: "Critters and Companions",
+    url: "https://www.curseforge.com/minecraft/mc-mods/critters-and-companions",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/728/545/64/64/638081057334527379.png",
+  },
+  {
     name: "Emotecraft",
     url: "https://www.curseforge.com/minecraft/mc-mods/emotecraft-forge",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/294/964/64/64/637335210850751725.png",
   },
   {
-    name: "Epic Fight",
-    url: "https://www.curseforge.com/minecraft/mc-mods/epic-fight-mod",
-    img_url:
-      "https://media.forgecdn.net/avatars/thumbnails/881/915/64/64/638312712562327674.png",
-  },
-  {
     name: "Farmers Delight",
     url: "https://www.curseforge.com/minecraft/mc-mods/farmers-delight",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/396/11/64/64/637595005615179370.png",
+  },
+  {
+    name: "Gliders",
+    url: "https://www.curseforge.com/minecraft/mc-mods/gliders",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/843/900/64/64/638240619391807565.png",
   },
   {
     name: "Handcrafted",
@@ -100,12 +112,6 @@ export const mods: IMods[] = [
     url: "https://www.curseforge.com/minecraft/mc-mods/refurbished-furniture",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/934/904/64/64/638411339753659456.png",
-  },
-  {
-    name: "Nature's Compass",
-    url: "https://www.curseforge.com/minecraft/mc-mods/natures-compass",
-    img_url:
-      "https://media.forgecdn.net/avatars/thumbnails/54/102/64/64/636131217371752080.png",
   },
   {
     name: "PlayerRevive",
@@ -142,6 +148,12 @@ export const mods: IMods[] = [
     url: "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/375/56/64/64/637549610342642859.png",
+  },
+  {
+    name: "Sophisticated Storage",
+    url: "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/543/206/64/64/637872959580005837.png",
   },
   {
     name: "The Twilight Forest",

@@ -7,10 +7,10 @@ interface IDownload {
 
 export const download: IDownload = {
   download_url:
-    "https://drive.google.com/file/d/1g-Gnz9eJX9Kp7go-rwl0NpWcDLt0Z0Kx/view?usp=sharing",
+    "https://drive.google.com/file/d/1-ceQS1-UbXdFsm1MqbNfpIgK5QgTXzi8/view?usp=sharing",
   last_update_url:
-    "https://drive.google.com/file/d/1Y8LSt20FadL7ZN6r4IOePQrrBgS3vzT9/view?usp=sharing",
+    "https://drive.google.com/file/d/1rZyKMb09TEtLkRbaO7NJyjRdjZa_LHk8/view?usp=sharing",
   download_mods_url:
     "https://drive.google.com/file/d/1Y8LSt20FadL7ZN6r4IOePQrrBgS3vzT9/view?usp=sharing",
-  number_of_mods: 92,
+  number_of_mods: 169,
 };
