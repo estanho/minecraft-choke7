@@ -6,9 +6,9 @@ interface IAlert {
 }
 
 export const alert: IAlert = {
-  enable: false,
-  title: "Servidor está passando por algumas mudanças!",
+  enable: true,
+  title: "Atualização do dia 03/10/2025 foi cancelada",
   description:
-    "Estamos tentando resolver os problemas relacionados aos fechamentos inesperados do servidor. Infelizmente podem ocorrer algumas instabilidades até tudo ser resolvido. Pedimos desculpas pelo inconveniente.",
+    "Tentamos realizar uma grande atualização porém foi encontrado varios problemas, optamos por reverter a atualização para o backup anterior. Peço desculpas pelo inconveniente.",
   duration: 30_000,
 };

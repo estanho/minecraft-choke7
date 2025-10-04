@@ -5,6 +5,7 @@ import { download } from "@/data/download";
 export function DownloadUpdate() {
   return (
     <>
+      {/* 
       <div id="tutorial" className="space-y-4">
         <h3>Vídeo sobre a atualização</h3>
         <div className="flex flex-col items-center justify-center">
@@ -18,6 +19,7 @@ export function DownloadUpdate() {
           ></iframe>
         </div>
       </div>
+      */}
 
       <div>
         <p>
@@ -41,8 +43,7 @@ export function DownloadUpdate() {
         </p>
 
         <p className="font-bold underline underline-offset-3">
-          Por favor excluir todo o conteúdo das pasta mods e emotes antes da
-          atualização.
+          Por favor excluir todo o conteúdo das pasta mods antes da atualização.
         </p>
 
         <p>Download da atualização completa.</p>

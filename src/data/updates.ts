@@ -10,12 +10,30 @@ interface IUpdates {
 
 export const updates: IUpdates[] = [
   {
+    date: "04/10/2025",
+    existsDependency: true,
+    changes: [
+      {
+        title: "+ Revertemos a atualização do dia 03/10/2025.",
+        description: "Alguns mods simples foram mantidos da atualização",
+        dependency: [
+          "+ Mod para melhorar visualização dos corações (Colorful Hearts).",
+          "+ Corpse x Curios API Compact.",
+          "+ Melhor visualização do F3 (Better F3).",
+          "+ Mods de desempenho.",
+          "+ Mods de correções de bugs.",
+          "+ Mod para organização de itens (Inventory Management Deluxe).",
+        ],
+      },
+    ],
+  },
+  {
     date: "03/10/2025",
     existsDependency: true,
     changes: [
       {
         title: "+ Grande atualização do servidor.",
-        description: "Muita coisa mesmo",
+        description: "CANCELADA",
         dependency: [
           "- Removido Aether",
           "- Removido Epic Fight e seu completo",
