@@ -10,6 +10,17 @@ interface IUpdates {
 
 export const updates: IUpdates[] = [
   {
+    date: "05/10/2025",
+    existsDependency: true,
+    changes: [
+      {
+        title: "+ Adicionado um mod para melhor gerenciamento de memória",
+        description: "Mod que estava na atualização e esqueci de deixar 😅",
+        dependency: ["+ FerriteCore"],
+      },
+    ],
+  },
+  {
     date: "04/10/2025",
     existsDependency: true,
     changes: [
