@@ -1,5 +1,4 @@
 import { LinkButton } from "@/components/links/link-button";
-//import { Separator } from "@/components/ui/separator";
 import { download } from "@/data/download";
 
 export function DownloadUpdate() {
@@ -43,7 +42,8 @@ export function DownloadUpdate() {
         </p>
 
         <p className="font-bold underline underline-offset-3">
-          Por favor excluir todo o conteúdo das pasta mods antes da atualização.
+          Por favor excluir todo o conteúdo das pasta MODS e CONFIG antes da
+          atualização.
         </p>
 
         <p>Download da atualização completa.</p>
@@ -52,15 +52,6 @@ export function DownloadUpdate() {
           text="Download completo da atualização"
           label="Link para download da atualização completa"
         />
-
-        {/* 
-        <p>Download da nova pasta mods completa.</p>
-        <LinkButton
-          href={download.download_mods_url}
-          text="Download da pasta mods completa"
-          label="Link para download da pasta mods completa"
-        />
-        */}
       </div>
     </>
   );

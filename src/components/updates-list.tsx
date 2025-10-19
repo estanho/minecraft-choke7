@@ -8,12 +8,12 @@ import { updates } from "@/data/updates";
 
 export function UpdatesList() {
   return (
-    <>
+    <div className="space-y-2">
       {updates.map((update, index) => {
         return (
           <Collapsible
             key={index}
-            className={`rounded-2xl border-1 ${update.existsDependency && "bg-background/30 border-2"}`}
+            className={`rounded-xl border-2 ${update.existsDependency && "bg-background/30"}`}
           >
             <CollapsibleTrigger
               className={`flex w-full flex-col items-start gap-1 p-3 ${update.existsDependency && "cursor-pointer"}`}
@@ -23,7 +23,7 @@ export function UpdatesList() {
                 <span className="text-lg font-bold">{update.date}</span>
                 {index === 0 && <Badge>Novo</Badge>}
               </div>
-              <span className="font-bold">
+              <span className="text-start font-bold">
                 {update.changes[0].title} ({update.changes[0].description})
               </span>
             </CollapsibleTrigger>
@@ -43,6 +43,6 @@ export function UpdatesList() {
           </Collapsible>
         );
       })}
-    </>
+    </div>
   );
 }

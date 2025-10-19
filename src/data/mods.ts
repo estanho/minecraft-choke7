@@ -6,12 +6,6 @@ interface IMods {
 
 export const mods: IMods[] = [
   {
-    name: "Aether",
-    url: "https://www.curseforge.com/minecraft/mc-mods/aether",
-    img_url:
-      "https://media.forgecdn.net/avatars/thumbnails/816/783/64/64/638194171174203953.png",
-  },
-  {
     name: "Artifacts",
     url: "https://www.curseforge.com/minecraft/mc-mods/artifacts",
     img_url:
@@ -58,12 +52,6 @@ export const mods: IMods[] = [
     url: "https://www.curseforge.com/minecraft/mc-mods/emotecraft-forge",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/294/964/64/64/637335210850751725.png",
-  },
-  {
-    name: "Epic Fight",
-    url: "https://www.curseforge.com/minecraft/mc-mods/epic-fight-mod",
-    img_url:
-      "https://media.forgecdn.net/avatars/thumbnails/881/915/64/64/638312712562327674.png",
   },
   {
     name: "Farmers Delight",
@@ -142,6 +130,12 @@ export const mods: IMods[] = [
     url: "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/375/56/64/64/637549610342642859.png",
+  },
+  {
+    name: "Sophisticated Storage",
+    url: "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/543/206/64/64/637872959580005837.png",
   },
   {
     name: "The Twilight Forest",

@@ -7,8 +7,8 @@ interface IAlert {
 
 export const alert: IAlert = {
   enable: true,
-  title: "Atualização do dia 03/10/2025 foi cancelada.",
+  title: "Nova atualização disponível [18/10/2025]",
   description:
-    "Tentamos realizar uma grande atualização porém foi encontrado vários problemas, optamos por reverter a atualização para o backup anterior. Peço desculpas pelo inconveniente.",
+    "Baixe a última atualização do Servidor da Lagoa dos Sapos! Veja o que há de novo nas Atualizações! Galeria foi atualizada! 🎉",
   duration: 30_000,
 };
