@@ -42,7 +42,7 @@ export function DownloadUpdate() {
         </p>
 
         <p className="font-bold underline underline-offset-3">
-          Por favor excluir todo o conteúdo das pasta MODS e CONFIG antes da
+          Por favor excluir todo o conteúdo das pastas CONFIG e MODS antes da
           atualização.
         </p>
 
