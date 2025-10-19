@@ -4,21 +4,21 @@ import { download } from "@/data/download";
 export function DownloadUpdate() {
   return (
     <>
-      {/* 
-      <div id="tutorial" className="space-y-4">
-        <h3>Vídeo sobre a atualização</h3>
-        <div className="flex flex-col items-center justify-center">
-          <iframe
-            className="h-96 w-full rounded-lg border-1"
-            src="https://www.youtube.com/embed/rvtVgGpzBZo?si=pQHWcIXcKcxzpswU"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+      {
+        <div id="tutorial" className="space-y-4">
+          <h3>...</h3>
+          <div className="flex flex-col items-center justify-center">
+            <iframe
+              className="h-96 w-full rounded-lg border-1"
+              src="https://www.youtube.com/embed/ipa1qbsi2OQ?si=-Ju26tSAvrUanTkq"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-      </div>
-      */}
+      }
 
       <div>
         <p>
