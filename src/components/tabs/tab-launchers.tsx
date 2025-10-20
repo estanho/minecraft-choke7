@@ -1,5 +1,7 @@
-import original from "@/assets/orientation/original.gif";
-import original1 from "@/assets/orientation/original1.gif";
+import curseforge from "@/assets/orientation/curseforge.png";
+import curseforge1 from "@/assets/orientation/curseforge1.gif";
+//import original from "@/assets/orientation/original.gif";
+//import original1 from "@/assets/orientation/original1.gif";
 import original2 from "@/assets/orientation/original2.gif";
 import sklauncher from "@/assets/orientation/sklauncher.png";
 import sklauncher1 from "@/assets/orientation/sklauncher1.gif";
@@ -39,13 +41,152 @@ export function TabLaunchers() {
         em outros launchers).
       </p>
       <Accordion id="launchers" type="multiple" className="space-y-2">
+        {/* CurseForge */}
+        <AccordionItem value="curseforge">
+          <AccordionTrigger>
+            <div id="accordion-trigger">
+              <img
+                src="/images/launchers/logo-curseforge.png"
+                alt="Logo do CurseForge"
+              />
+              <span>CurseForge</span>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="mt-4 space-y-4">
+            <h4>Minecraft Original</h4>
+            <p className="font-semibold">
+              1. Baixe o Minecraft pelo site oficial e logue com a sua conta.
+            </p>
+
+            <Separator />
+
+            <h4>CurseForge</h4>
+            <p className="font-semibold">
+              2. Baixe o CurseForge pelo site oficial e na opção &quot;Download
+              standalone&quot;.
+            </p>
+
+            <LinkButton
+              href="https://www.curseforge.com/download/app"
+              label="Link para download do CurseForge"
+              text="Download CurseForge"
+            />
+
+            <Accordion id="download-curseforge" type="multiple">
+              <AccordionItem value="download-curseforge">
+                <AccordionTrigger>
+                  <div className="flex items-center gap-4">
+                    <Image />
+                    Imagem mostrando onde baixar o CurseForge
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ModalImg
+                    src={curseforge}
+                    alt="Imagem mostrando onde baixar o CurseForge"
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <p>
+              Depois da instalação, na primeira inicialização vai ser perguntado
+              sobre criar/logar com uma conta, mas não é necessário nada disso.
+              Você pode acessar o CurseForge como &quot;guest&quot; (convidado).
+            </p>
+
+            <Separator />
+
+            <p className="font-semibold">
+              3. Dentro do CurseForge você deve selecionar o jogo Minecraft para
+              criar o modpack.
+            </p>
+
+            <p>
+              Você precisa criar um modpack selecionando a opção de &quot;+
+              Criar&quot;.
+            </p>
+            <p>
+              Dentro das opções do modpack você deve selecionar a versão 1.20.1
+              do Minecraft e o forge na versão 47.4.0.
+            </p>
+
+            <Accordion id="download-curseforge" type="multiple">
+              <AccordionItem value="download-curseforge">
+                <AccordionTrigger>
+                  <div className="flex items-center gap-4">
+                    <ImagePlay />
+                    GIF mostrando como criar o modpack
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ModalImg
+                    src={curseforge1}
+                    alt="GIF mostrando como criar o modpack"
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Separator />
+
+            <p className="font-semibold">
+              4. Você pode iniciar o jogo pelo CurseForge para alterar a
+              quantidade de memória. O jogo deve estar configurado para utilizar
+              pelo menos 5GB de RAM.
+            </p>
+            <p>
+              Dentro do Launcher Original que vai ser aberto pelo CurseForge. No
+              menu de edição da instalação, você deve selecionar a opção para
+              exibir &quot;Mais Opções&quot; e verificar a quantidade de memória
+              máxima para o Minecraft. A quantidade de memória está na linha de
+              &quot;Argumentos da JVM&quot; e fica no começo da linha com
+              &quot;-Xmx2G ...&quot;. Para aumentar você deve alterar para
+              &quot;-Xmx5G ...&quot;. Recomendado utilizar no mínimo 5GB de RAM.
+            </p>
+
+            <Accordion id="performance-original" type="multiple">
+              <AccordionItem value="performance-original">
+                <AccordionTrigger>
+                  <div className="flex items-center gap-4">
+                    <ImagePlay />
+                    GIF mostrando como verficar a quantidade de memória
+                    <span className="animate-pulse font-light">
+                      (Clique aqui para visualizar)
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ModalImg
+                    src={original2}
+                    alt="GIF mostrando como verificar a quantidade de memória"
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <Separator />
+
+            <p className="font-semibold">
+              6. Depois de tudo, você vai ter feito a configuração do launcher
+              para o servidor. 🎉
+            </p>
+          </AccordionContent>
+        </AccordionItem>
         {/* Minecraft Original */}
+        {/* 
         <AccordionItem value="original">
           <AccordionTrigger>
             <div id="accordion-trigger">
               <img
                 src="/images/launchers/logo-original.png"
-                alt="Logo do SKLauncher"
+                alt="Logo do Launcher Original"
               />
               <span>Launcher Original</span>
             </div>
@@ -178,6 +319,7 @@ export function TabLaunchers() {
             </p>
           </AccordionContent>
         </AccordionItem>
+        */}
         {/* SKLauncher */}
         <AccordionItem value="sklauncher">
           <AccordionTrigger>

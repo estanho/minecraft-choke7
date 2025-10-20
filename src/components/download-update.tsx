@@ -6,7 +6,7 @@ export function DownloadUpdate() {
     <>
       {
         <div id="tutorial" className="space-y-4">
-          <h3>...</h3>
+          <h3>Amelia chegou..</h3>
           <div className="flex flex-col items-center justify-center">
             <iframe
               className="h-96 w-full rounded-lg border-1"
@@ -41,9 +41,13 @@ export function DownloadUpdate() {
           após a atualização.
         </p>
 
-        <p className="font-bold underline underline-offset-3">
-          Por favor excluir todo o conteúdo das pastas CONFIG e MODS antes da
-          atualização.
+        <p className="font-bold">
+          ⚠️ Por favor excluir todo o conteúdo da pasta MODS antes da
+          atualização. ⚠️
+        </p>
+        <p className="font-bold">
+          Não é necessário excluir a pasta CONFIG, apenas aceitar a substituição
+          dos arquivos.
         </p>
 
         <p>Download da atualização completa.</p>

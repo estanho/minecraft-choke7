@@ -6,8 +6,8 @@ interface IDownload {
 
 export const download: IDownload = {
   download_url:
-    "https://drive.google.com/file/d/1_ZtvUmS0NC7dqFbz3QO8h_jDUTfmvatp/view?usp=sharing",
+    "https://drive.google.com/file/d/1Pzf4m49MsFRtBXuA6enN_n6-9C6s9uZJ/view?usp=sharing",
   last_update_url:
-    "https://drive.google.com/file/d/10UiPofFczgTcq9TGnXjW2Fv299W-pLp6/view?usp=sharing",
-  number_of_mods: 126,
+    "https://drive.google.com/file/d/1IWbg3jJ0xETMoNptL_9Lnq4MPed33mXV/view?usp=sharing",
+  number_of_mods: 164,
 };

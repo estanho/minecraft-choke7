@@ -1,4 +1,5 @@
 import appdata from "@/assets/orientation/appdata.gif";
+import curseforge2 from "@/assets/orientation/curseforge2.gif";
 import installation from "@/assets/orientation/installation.gif";
 import { LinkButton } from "@/components/links/link-button";
 import { LinkInline } from "@/components/links/link-inline";
@@ -39,24 +40,45 @@ export function TabDownloads() {
       <Separator />
 
       <p className="font-semibold">
-        2. O arquivo .zip baixado deve ser extraído na pasta .minecraft.
+        2. O arquivo .zip baixado deve ser extraído na pasta do minecraft.
       </p>
       <p>
         O conteúdo do arquivo .zip deve substituir as pastas e arquivos
-        existentes.{" "}
-        <span className="font-bold underline underline-offset-3">
-          Se você já tiver mods instalados é importante remove-los da pasta
-          &quot;mods&quot; para evitar conflitos
-        </span>
-        .
+        existentes.
       </p>
+
+      <p className="font-bold">CurseForge:</p>
+
+      <Accordion id="curseforge" type="multiple">
+        <AccordionItem value="curseforge">
+          <AccordionTrigger>
+            <div className="flex items-center gap-4">
+              <ImagePlay />
+              GIF mostrando como extrair os arquivos do .zip (CURSEFORGE)
+              <span className="animate-pulse font-light">
+                (Clique aqui para visualizar)
+              </span>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col items-center">
+            <ModalImg
+              src={curseforge2}
+              alt="GIF mostrando como extrair os arquivos do .zip (CURSEFORGE)"
+            />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+
+      <Separator />
+
+      <p className="font-bold">SKLauncher:</p>
 
       <Accordion id="appdata" type="multiple">
         <AccordionItem value="appdata">
           <AccordionTrigger>
             <div className="flex items-center gap-4">
               <ImagePlay />
-              GIF mostrando como encontrar a .minecraft
+              GIF mostrando como encontrar a pasta do minecraft
               <span className="animate-pulse font-light">
                 (Clique aqui para visualizar)
               </span>
@@ -81,7 +103,7 @@ export function TabDownloads() {
           <AccordionTrigger>
             <div className="flex items-center gap-4">
               <ImagePlay />
-              GIF mostrando como extrair os arquivos do .zip
+              GIF mostrando como extrair os arquivos do .zip (SKLAUNCHER)
               <span className="animate-pulse font-light">
                 (Clique aqui para visualizar)
               </span>
