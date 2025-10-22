@@ -51,7 +51,7 @@ export function TabWhitelist() {
         }
       >
         <p className="font-mono text-sm font-semibold">
-          Twitch: estanhoeu - Minecraft: Estanho
+          Twitch: nickname - Minecraft: nickname
         </p>
         <div className="flex flex-row items-center gap-1">
           {copied ? (
