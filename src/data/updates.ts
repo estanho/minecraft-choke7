@@ -11,7 +11,7 @@ interface IUpdates {
 export const updates: IUpdates[] = [
   {
     date: "25/10/2025",
-    existsDependency: true,
+    existsDependency: false,
     changes: [
       {
         title: "+ Corrigindo erro dos Villagers.",
