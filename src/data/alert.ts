@@ -7,7 +7,7 @@ interface IAlert {
 
 export const alert: IAlert = {
   enable: true,
-  title: "Nova atualização disponível [20/10/2025]",
+  title: "Nova atualização disponível [25/10/2025]",
   description:
     "Baixe a última atualização do Servidor da Lagoa dos Sapos! Veja o que há de novo nas Atualizações! Galeria foi atualizada! 🎉",
   duration: 30_000,

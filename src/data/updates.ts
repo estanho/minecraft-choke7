@@ -10,6 +10,17 @@ interface IUpdates {
 
 export const updates: IUpdates[] = [
   {
+    date: "25/10/2025",
+    existsDependency: true,
+    changes: [
+      {
+        title: "+ Corrigindo erro dos Villagers.",
+        description: "Ajuste nas versões de alguns mods",
+        dependency: [],
+      },
+    ],
+  },
+  {
     date: "20/10/2025",
     existsDependency: true,
     changes: [
