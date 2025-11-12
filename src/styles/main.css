@@ -1,33 +1,11 @@
-@import "@fontsource/press-start-2p";
-@import "@fontsource/roboto/200.css";
-@import "@fontsource/roboto/300.css";
-@import "@fontsource/roboto/400.css";
-@import "@fontsource/roboto/500.css";
-@import "@fontsource/roboto/600.css";
-@import "@fontsource/roboto/700.css";
-@import "@fontsource/roboto/800.css";
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: Minecraftia;
-  src: url("/fonts/Minecraftia.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Monocraft;
-  src: url("/fonts/Monocraft.ttf") format("truetype");
-  font-display: swap;
-}
-
 @theme {
   --font-title: "Press Start 2P", "Roboto", "sans-serif";
   --font-sans: "Roboto", "sans-serif";
-
   --font-mine: Minecraftia, "Roboto", "sans-serif";
   --font-mine-icon: Monocraft, "Roboto", "sans-serif";
 }
@@ -170,7 +148,7 @@
   }
 
   p {
-    @apply text-base leading-7 [&:not(:first-child)]:mt-6 opacity-95;
+    @apply text-base leading-7 not-first:mt-6 opacity-95;
   }
 
   ul {
@@ -189,5 +167,14 @@
 
   #accordion-trigger > img {
     @apply w-8 rounded-lg object-cover;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

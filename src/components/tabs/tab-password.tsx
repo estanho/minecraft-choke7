@@ -1,4 +1,3 @@
-import password from "@/assets/orientation/password.gif";
 import { ModalImg } from "@/components/modal-img";
 import {
   Accordion,
@@ -8,6 +7,10 @@ import {
 } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
 import { ImagePlay } from "lucide-react";
+
+const images = {
+  password: "/images/orientation/password.gif",
+};
 
 export function TabPassword() {
   return (
@@ -47,7 +50,10 @@ export function TabPassword() {
               Você não vai precisar digitar essa senha em nenhum momento, ela é
               utilizada pelo mod automaticamente quando você entra no servidor.
             </p>
-            <ModalImg src={password} alt="GIF mostrando como criar a senha" />
+            <ModalImg
+              src={images.password}
+              alt="GIF mostrando como criar a senha"
+            />
           </AccordionContent>
         </AccordionItem>
       </Accordion>

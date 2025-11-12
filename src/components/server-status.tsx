@@ -1,6 +1,3 @@
-import offlineIcon from "@/assets/offline.png";
-import onlineIcon from "@/assets/online.png";
-import froglaugh from "@/assets/sounds/froglaugh.mp3";
 import { ClickableSoundImage } from "@/components/jokes/clickable-sound-image";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,7 +6,13 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useServerStatus } from "@/hooks/useServerStatus";
+import { useServerStatus } from "@/hooks/use-server-status";
+import Image from "next/image";
+
+const images = {
+  offline: "/offline.png",
+  online: "/online.png",
+};
 
 export function ServerStatus() {
   const { data, isLoading, isError } = useServerStatus();
@@ -46,21 +49,19 @@ export function ServerStatus() {
   }
 
   return (
-    <div className="font-mine rounded-md border-1 bg-[url('/src/assets/background-status.png')] p-4">
+    <div className="font-mine rounded-md border bg-[url('/background-status.png')] p-4">
       <div className="flex justify-between">
         <div className="flex gap-2">
           {isOfflineState ? (
             <Skeleton className="h-16 w-16" />
           ) : (
             <ClickableSoundImage
-              src={data?.icon}
-              soundUrl={froglaugh}
+              src={data?.icon || images.offline}
+              soundUrl={"/sounds/froglaugh.mp3"}
               alt="Ícone do Servidor"
               volume={0.1}
-              className="h-16 w-16"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
-              }}
+              width={64}
+              height={64}
             />
           )}
           <div className="mt-1 text-sm lg:text-base">
@@ -97,16 +98,20 @@ export function ServerStatus() {
                     <span className="text-gray-600">/</span>
                     <span>{data.players?.max ?? 0}</span>
                   </div>
-                  <img
-                    src={onlineIcon}
-                    className="-mt-3 h-4 w-4"
+                  <Image
+                    src={images.online}
+                    className="-mt-3"
+                    width={16}
+                    height={16}
                     alt="Ícone Online"
                   />
                 </>
               ) : (
-                <img
-                  src={offlineIcon}
-                  className="-mt-3 h-4 w-4"
+                <Image
+                  src={images.offline}
+                  className="-mt-3"
+                  width={16}
+                  height={16}
                   alt="Ícone Offline"
                 />
               )}

@@ -7,9 +7,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { gallery } from "@/data/gallery";
+import { Skeleton } from "@/components/ui/skeleton";
+import { getGalleryImages } from "@/lib/get-gallery-images";
+import { useEffect, useState } from "react";
 
 export function Gallery() {
+  const [images, setImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    getGalleryImages().then((images) => setImages(images));
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center">
       <Carousel
@@ -20,20 +28,26 @@ export function Gallery() {
         className="w-full max-w-3xl"
       >
         <CarouselContent>
-          {gallery &&
-            gallery.length > 0 &&
-            gallery.map((image, index) => {
+          {images && images.length > 0 ? (
+            images.map((image, index) => {
               return (
                 <CarouselItem key={index}>
                   <AspectRatio ratio={16 / 9}>
                     <ModalImg
-                      src={image.image}
+                      src={image}
                       alt={`Imagem da Galeria: Foto ${index + 1}`}
                     />
                   </AspectRatio>
                 </CarouselItem>
               );
-            })}
+            })
+          ) : (
+            <CarouselItem>
+              <AspectRatio ratio={16 / 9}>
+                <Skeleton className="m-auto h-[404px] w-[770px] rounded-2xl" />
+              </AspectRatio>
+            </CarouselItem>
+          )}
         </CarouselContent>
         <CarouselPrevious className="hidden cursor-pointer lg:flex" />
         <CarouselNext className="hidden cursor-pointer lg:flex" />

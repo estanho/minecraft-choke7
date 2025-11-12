@@ -1,3 +1,5 @@
+"use client";
+
 import { LinkInline } from "@/components/links/link-inline";
 import { Separator } from "@/components/ui/separator";
 import { Check, Copy } from "lucide-react";

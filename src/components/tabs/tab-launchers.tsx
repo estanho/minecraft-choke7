@@ -1,12 +1,3 @@
-import curseforge from "@/assets/orientation/curseforge.png";
-import curseforge1 from "@/assets/orientation/curseforge1.gif";
-//import original from "@/assets/orientation/original.gif";
-//import original1 from "@/assets/orientation/original1.gif";
-import original2 from "@/assets/orientation/original2.gif";
-import sklauncher from "@/assets/orientation/sklauncher.png";
-import sklauncher1 from "@/assets/orientation/sklauncher1.gif";
-import sklauncher2 from "@/assets/orientation/sklauncher2.gif";
-import sklauncher3 from "@/assets/orientation/sklauncher3.gif";
 import { LinkButton } from "@/components/links/link-button";
 import { LinkInline } from "@/components/links/link-inline";
 import { ModalImg } from "@/components/modal-img";
@@ -17,7 +8,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
-import { Image, ImagePlay } from "lucide-react";
+import { ImageIcon, ImagePlay } from "lucide-react";
+import Image from "next/image";
+
+const images = {
+  curseforgeIcon: "/images/launchers/logo-curseforge.png",
+  sklauncherIcon: "/images/launchers/logo-sklauncher.png",
+  curseforge: "/images/orientation/curseforge.png",
+  curseforge1: "/images/orientation/curseforge1.gif",
+  original2: "/images/orientation/original2.gif",
+  sklauncher: "/images/orientation/sklauncher.png",
+  sklauncher1: "/images/orientation/sklauncher1.gif",
+  sklauncher2: "/images/orientation/sklauncher2.gif",
+  sklauncher3: "/images/orientation/sklauncher3.gif",
+};
 
 export function TabLaunchers() {
   return (
@@ -45,8 +49,10 @@ export function TabLaunchers() {
         <AccordionItem value="curseforge">
           <AccordionTrigger>
             <div id="accordion-trigger">
-              <img
-                src="/images/launchers/logo-curseforge.png"
+              <Image
+                src={images.curseforgeIcon}
+                width={24}
+                height={24}
                 alt="Logo do CurseForge"
               />
               <span>CurseForge</span>
@@ -76,7 +82,7 @@ export function TabLaunchers() {
               <AccordionItem value="download-curseforge">
                 <AccordionTrigger>
                   <div className="flex items-center gap-4">
-                    <Image />
+                    <ImageIcon />
                     Imagem mostrando onde baixar o CurseForge
                     <span className="animate-pulse font-light">
                       (Clique aqui para visualizar)
@@ -85,7 +91,7 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ModalImg
-                    src={curseforge}
+                    src={images.curseforge}
                     alt="Imagem mostrando onde baixar o CurseForge"
                   />
                 </AccordionContent>
@@ -127,7 +133,7 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ModalImg
-                    src={curseforge1}
+                    src={images.curseforge1}
                     alt="GIF mostrando como criar o modpack"
                   />
                 </AccordionContent>
@@ -164,7 +170,7 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ModalImg
-                    src={original2}
+                    src={images.original2}
                     alt="GIF mostrando como verificar a quantidade de memória"
                   />
                 </AccordionContent>
@@ -179,153 +185,14 @@ export function TabLaunchers() {
             </p>
           </AccordionContent>
         </AccordionItem>
-        {/* Minecraft Original */}
-        {/* 
-        <AccordionItem value="original">
-          <AccordionTrigger>
-            <div id="accordion-trigger">
-              <img
-                src="/images/launchers/logo-original.png"
-                alt="Logo do Launcher Original"
-              />
-              <span>Launcher Original</span>
-            </div>
-          </AccordionTrigger>
-          <AccordionContent className="mt-4 space-y-4">
-            <h4>Launcher Original</h4>
-            <p className="font-semibold">
-              1. Baixe o Minecraft pelo site oficial e logue com a sua conta.
-            </p>
-
-            <Separator />
-
-            <p>
-              2. É necessário baixar o Forge separadamente pois o launcher
-              oficial não disponibiliza essa funcionalidade.
-            </p>
-
-            <LinkButton
-              href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html"
-              label="Link para download do Forge 1.20.1 - 47.4.0"
-              text="Download Forge 1.20.1 - 47.4.0"
-            />
-
-            <Accordion id="download-original" type="multiple">
-              <AccordionItem value="download-original">
-                <AccordionTrigger>
-                  <div className="flex items-center gap-4">
-                    <ImagePlay />
-                    GIF mostrando como baixar o Forge 1.20.1 - 47.4.0
-                    <span className="animate-pulse font-light">
-                      (Clique aqui para visualizar)
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p>Importante ser a versão 47.4.0 do Forge!</p>
-                  <ModalImg
-                    src={original}
-                    alt="GIF mostrando como verficar a quantidade de memória"
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <Separator />
-
-            <p className="font-semibold">
-              3. Após baixar o Forge, execute o arquivo .jar para instalar.
-            </p>
-
-            <Accordion id="forge-original" type="multiple">
-              <AccordionItem value="forge-original">
-                <AccordionTrigger>
-                  <div className="flex items-center gap-4">
-                    <ImagePlay />
-                    GIF mostrando como é a instalação do Forge
-                    <span className="animate-pulse font-light">
-                      (Clique aqui para visualizar)
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="flex flex-col items-center">
-                  <p>
-                    Caso você não consiga executar o arquivo .jar, possivelmente
-                    você não tem o Java instalado (
-                    <LinkInline
-                      href="https://www.java.com/pt-br/download/manual.jsp"
-                      label="Link para download do Java"
-                      text="Download do Java"
-                    />
-                    ).
-                  </p>
-                  <ModalImg
-                    src={original1}
-                    alt="GIF mostrando como é a instalação do Forge"
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <Separator />
-
-            <p className="font-semibold">
-              4. Com o Forge instalado, você pode iniciar o launcher original e
-              nele vai existir uma nova &quot;instalação&quot; do Forge para
-              jogar.
-            </p>
-
-            <Separator />
-
-            <p className="font-semibold">
-              5. É interessante nesse momento verificar se o jogo vai utilizar
-              pelo menos 5GB de RAM alocada para o Minecraft.
-            </p>
-            <p>
-              No menu de edição da instalação do Forge você deve selecionar a
-              opção para exibir &quot;Mais Opções&quot; e verificar a quantidade
-              de memória máxima para o Minecraft. A quantidade de memória está
-              na linha de &quot;Argumentos da JVM&quot; e fica no começo da
-              linha com &quot;-Xmx2G ...&quot;. Para aumentar você deve alterar
-              para &quot;-Xmx6G ...&quot;. Recomendado utilizar no mínimo 5GB de
-              RAM.
-            </p>
-
-            <Accordion id="performance-original" type="multiple">
-              <AccordionItem value="performance-original">
-                <AccordionTrigger>
-                  <div className="flex items-center gap-4">
-                    <ImagePlay />
-                    GIF mostrando como verficar a quantidade de memória
-                    <span className="animate-pulse font-light">
-                      (Clique aqui para visualizar)
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ModalImg
-                    src={original2}
-                    alt="GIF mostrando como verificar a quantidade de memória"
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            <Separator />
-
-            <p className="font-semibold">
-              6. Depois de tudo, você vai ter feito a configuração do launcher
-              para o servidor. 🎉
-            </p>
-          </AccordionContent>
-        </AccordionItem>
-        */}
         {/* SKLauncher */}
         <AccordionItem value="sklauncher">
           <AccordionTrigger>
             <div id="accordion-trigger">
-              <img
-                src="/images/launchers/logo-sklauncher.png"
+              <Image
+                src={images.sklauncherIcon}
+                width={24}
+                height={24}
                 alt="Logo do SKLauncher"
               />
               <span>SKLauncher (Launcher alternativo)</span>
@@ -355,7 +222,7 @@ export function TabLaunchers() {
               <AccordionItem value="download-sklauncher">
                 <AccordionTrigger>
                   <div className="flex items-center gap-4">
-                    <Image />
+                    <ImageIcon />
                     Imagem mostrando onde baixar o SKLauncher
                     <span className="animate-pulse font-light">
                       (Clique aqui para visualizar)
@@ -364,7 +231,7 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ModalImg
-                    src={sklauncher}
+                    src={images.sklauncher}
                     alt="Imagem mostrando onde baixar o SKLauncher"
                   />
                 </AccordionContent>
@@ -403,7 +270,7 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ModalImg
-                    src={sklauncher1}
+                    src={images.sklauncher1}
                     alt="GIF mostrando como selecionar o username"
                   />
                 </AccordionContent>
@@ -436,7 +303,7 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ModalImg
-                    src={sklauncher2}
+                    src={images.sklauncher2}
                     alt="GIF mostrando como criar a instalação"
                   />
                 </AccordionContent>
@@ -468,7 +335,7 @@ export function TabLaunchers() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ModalImg
-                    src={sklauncher3}
+                    src={images.sklauncher3}
                     alt="GIF mostrando como verificar a quantidade de memória"
                   />
                 </AccordionContent>

@@ -1,3 +1,5 @@
+"use client";
+
 import InstagramIcon from "@/components/network-icons/instagram-icon";
 import TiktokClipsIcon from "@/components/network-icons/tiktok-clips-icon";
 import TiktokIcon from "@/components/network-icons/tiktok-icon";

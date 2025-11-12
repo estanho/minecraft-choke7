@@ -1,5 +1,5 @@
-import enxadahost from "@/assets/enxadahost.png";
-import headSkinChoke from "@/assets/head-skin-choke.png";
+"use client";
+
 import { CarouselMods } from "@/components/carousel-mods";
 import { DownloadUpdate } from "@/components/download-update";
 import { Gallery } from "@/components/gallery";
@@ -17,11 +17,17 @@ import { TabWhitelist } from "@/components/tabs/tab-whitelist";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UpdatesList } from "@/components/updates-list";
-import { useAlert } from "@/hooks/alert";
+import { useAlert } from "@/hooks/use-alert";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { Toaster } from "sonner";
 
-export default function App() {
+const images = {
+  headSkinChoke: "/head-skin-choke.png",
+  enxadahost: "/enxadahost.png",
+};
+
+export default function Home() {
   useAlert();
 
   const [value, setValue] = useState("launchers");
@@ -46,8 +52,11 @@ export default function App() {
           <div className="flex flex-col items-center justify-center gap-12 px-18 py-28 lg:flex-row lg:py-44">
             <div id="logo">
               <ClickableSoundImage
-                src={headSkinChoke}
+                src={images.headSkinChoke}
                 alt="Imagem da skin do Choke"
+                width={144}
+                height={144}
+                priority
                 className="rounded-lg"
               />
             </div>
@@ -74,10 +83,12 @@ export default function App() {
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <img
-                      src={enxadahost}
+                    <Image
+                      src={images.enxadahost}
                       alt="Logo da EnxadaHost"
-                      className="w-36 cursor-pointer hover:animate-pulse"
+                      width={150}
+                      height={75}
+                      className="cursor-pointer hover:animate-pulse"
                     />
                   </a>
                   <span className="mt-2 text-center text-sm">Cupom: CHOKE</span>
@@ -97,10 +108,12 @@ export default function App() {
           <section id="server-status" className="mx-auto max-w-4xl">
             <Card className="relative">
               <h2>Status do Servidor </h2>
-              <img
+              <Image
                 src="/images/emotes/nerd.gif"
                 alt="ícone de nerd"
-                className="bg-card absolute -end-6 -top-6 m-2 h-12 w-12 rounded-3xl border-1 p-2 hover:animate-spin dark:bg-[#121a0d]"
+                width={48}
+                height={48}
+                className="bg-card absolute -end-6 -top-6 m-2 rounded-3xl border p-2 hover:animate-spin dark:bg-[#121a0d]"
               />
               <ServerStatus />
             </Card>

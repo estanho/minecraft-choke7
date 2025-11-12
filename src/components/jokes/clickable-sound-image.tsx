@@ -1,39 +1,42 @@
-import aum from "@/assets/sounds/aum.mp3";
-import galera from "@/assets/sounds/galera.mp3";
-import imenso from "@/assets/sounds/imenso.mp3";
-import paysandu from "@/assets/sounds/paysandu.mp3";
-import semvergonha from "@/assets/sounds/semvergonha.mp3";
-import uaaaaa from "@/assets/sounds/uaaaaa.mp3";
-import unhe from "@/assets/sounds/unhe.mp3";
+"use client";
+
+import Image from "next/image";
 import React, { useRef } from "react";
 
-interface ClickableSoundImageProps
-  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, "onClick"> {
-  src?: string;
-  alt?: string;
+interface ClickableSoundImageProps {
+  src: string;
+  alt: string;
   soundUrl?: string;
   volume?: number;
   className?: string;
+  width: number;
+  height: number;
+  priority?: boolean;
+  fill?: boolean;
 }
 
 export function ClickableSoundImage({
   src,
   alt,
   soundUrl,
-  className,
+  className = "",
   volume = 0.5,
-  ...props
+  width,
+  height,
+  priority = false,
+  fill = false,
 }: ClickableSoundImageProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const randomSounds = [
-    aum,
-    galera,
-    imenso,
-    paysandu,
-    semvergonha,
-    uaaaaa,
-    unhe,
+    "sounds/aum.mp3",
+    "sounds/froglaugh.mp3",
+    "sounds/galera.mp3",
+    "sounds/imenso.mp3",
+    "sounds/paysandu.mp3",
+    "sounds/semvergonha.mp3",
+    "sounds/uaaaaa.mp3",
+    "sounds/unhe.mp3",
   ];
 
   const getSound = (): string => {
@@ -63,14 +66,31 @@ export function ClickableSoundImage({
     <>
       <audio ref={audioRef} preload="none" />
 
-      <img
-        src={src}
-        alt={alt}
-        onClick={handleClick}
-        className={`cursor-pointer transition-transform select-none hover:scale-105 active:scale-95 ${className}`}
-        draggable={false}
-        {...props}
-      />
+      {fill ? (
+        <div className={`relative ${className}`} onClick={handleClick}>
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            fill
+            priority={priority}
+            className="cursor-pointer object-cover transition-transform select-none hover:scale-105 active:scale-95"
+            draggable={false}
+          />
+        </div>
+      ) : (
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          priority={priority}
+          onClick={handleClick}
+          className={`cursor-pointer transition-transform select-none hover:scale-105 active:scale-95 ${className}`}
+          draggable={false}
+        />
+      )}
     </>
   );
 }

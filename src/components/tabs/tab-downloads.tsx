@@ -1,6 +1,3 @@
-import appdata from "@/assets/orientation/appdata.gif";
-import curseforge2 from "@/assets/orientation/curseforge2.gif";
-import installation from "@/assets/orientation/installation.gif";
 import { LinkButton } from "@/components/links/link-button";
 import { LinkInline } from "@/components/links/link-inline";
 import { ModalImg } from "@/components/modal-img";
@@ -13,6 +10,12 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { download } from "@/data/download";
 import { ImagePlay } from "lucide-react";
+
+const images = {
+  appdata: "/images/orientation/appdata.gif",
+  curseforge: "/images/orientation/curseforge2.gif",
+  installation: "/images/orientation/installation.gif",
+};
 
 export function TabDownloads() {
   return (
@@ -62,7 +65,7 @@ export function TabDownloads() {
           </AccordionTrigger>
           <AccordionContent className="flex flex-col items-center">
             <ModalImg
-              src={curseforge2}
+              src={images.curseforge}
               alt="GIF mostrando como extrair os arquivos do .zip (CURSEFORGE)"
             />
           </AccordionContent>
@@ -91,7 +94,7 @@ export function TabDownloads() {
               e aperte Enter. Assim você encontrará a pasta .minecraft.
             </p>
             <ModalImg
-              src={appdata}
+              src={images.appdata}
               alt="GIF mostrando onde encontrar a pasta .minecraft"
             />
           </AccordionContent>
@@ -121,7 +124,7 @@ export function TabDownloads() {
               nesse caso.
             </p>
             <ModalImg
-              src={installation}
+              src={images.installation}
               alt="GIF mostrando como instalar os mods"
             />
           </AccordionContent>
