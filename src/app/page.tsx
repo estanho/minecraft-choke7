@@ -184,7 +184,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col items-center justify-center">
                   <iframe
-                    className="h-96 w-full rounded-lg border-1"
+                    className="h-96 w-full rounded-lg border"
                     src="https://www.youtube.com/embed/YnDn30lNWUw?si=4PAARMyB5L7T-cg-"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
