@@ -68,8 +68,7 @@ export function ServerStatus() {
             <span className="text-white">Lagoa dos Sapos</span>
             {isOfflineState ? (
               <>
-                <Skeleton className="h-[17px] w-[140px] lg:h-[17px] lg:w-[364px]" />
-                <Skeleton className="mt-1 h-[17px] w-[100px] lg:h-[17px] lg:w-[264px]" />
+                <Skeleton className="h-[17px] w-[140px] lg:h-[17px] lg:w-[330px]" />
               </>
             ) : (
               <>

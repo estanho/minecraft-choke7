@@ -18,12 +18,12 @@ const roboto = Roboto({
 });
 
 const minecraftia = localFont({
-  src: "./fonts/Minecraftia.ttf",
+  src: "../../public/fonts/Minecraftia.ttf",
   variable: "--font-mine",
 });
 
 const monocraft = localFont({
-  src: "./fonts/Monocraft.ttf",
+  src: "../../public/fonts/Monocraft.ttf",
   variable: "--font-mine-icon",
 });
 

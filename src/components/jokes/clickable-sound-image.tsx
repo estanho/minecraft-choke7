@@ -30,7 +30,6 @@ export function ClickableSoundImage({
 
   const randomSounds = [
     "sounds/aum.mp3",
-    "sounds/froglaugh.mp3",
     "sounds/galera.mp3",
     "sounds/imenso.mp3",
     "sounds/paysandu.mp3",

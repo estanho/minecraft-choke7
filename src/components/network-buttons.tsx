@@ -1,5 +1,3 @@
-"use client";
-
 import InstagramIcon from "@/components/network-icons/instagram-icon";
 import TiktokClipsIcon from "@/components/network-icons/tiktok-clips-icon";
 import TiktokIcon from "@/components/network-icons/tiktok-icon";
@@ -8,13 +6,11 @@ import XIcon from "@/components/network-icons/x-icon";
 import YoutubeIcon from "@/components/network-icons/youtube-icon";
 import YoutubeVodIcon from "@/components/network-icons/youtube-vod-icon";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useEffect, useState } from "react";
 
 const socialNetworks = [
   {
@@ -55,22 +51,6 @@ const socialNetworks = [
 ];
 
 export function NetworkButtons() {
-  const [hasMounted, setHasMounted] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  if (!hasMounted) {
-    return (
-      <div className="">
-        <div className="flex justify-start gap-3">
-          <Skeleton className="h-[30px] w-[140px] rounded-md" />
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-row items-center justify-center gap-3">
