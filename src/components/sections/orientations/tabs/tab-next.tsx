@@ -3,12 +3,14 @@ import { ArrowRight } from "lucide-react";
 
 interface TabNextProps {
   scrollingToElement: (value: string) => void;
+  onChange?: (value: string) => void;
   tabName: string;
   buttonText: string;
 }
 
 export function TabNext({
   scrollingToElement,
+  onChange,
   tabName,
   buttonText,
 }: TabNextProps) {
@@ -17,7 +19,12 @@ export function TabNext({
       <Button
         variant={"outline"}
         className="cursor-pointer"
-        onClick={() => scrollingToElement(tabName)}
+        onClick={() => {
+          scrollingToElement(tabName);
+          if (onChange) {
+            onChange(tabName);
+          }
+        }}
       >
         {buttonText}
         <ArrowRight />

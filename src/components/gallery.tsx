@@ -1,3 +1,5 @@
+"use client";
+
 import { ModalImg } from "@/components/modal-img";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {

@@ -5,6 +5,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { updates } from "@/data/updates";
+import { ChevronDown } from "lucide-react";
 
 export function UpdatesList() {
   return (
@@ -19,9 +20,17 @@ export function UpdatesList() {
               className={`flex w-full flex-col items-start gap-1 p-3 ${update.existsDependency && "cursor-pointer"}`}
               disabled={!update.existsDependency}
             >
-              <div className="flex items-center gap-3">
-                <span className="text-lg font-bold">{update.date}</span>
-                {index === 0 && <Badge>Novo</Badge>}
+              <div className="flex w-full items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="text-lg font-bold">{update.date}</span>
+                  {index === 0 && <Badge>Novo</Badge>}
+                </div>
+
+                <div>
+                  <ChevronDown
+                    className={`h-4 w-4 ${update.existsDependency ? "opacity-80" : "opacity-25"}`}
+                  />
+                </div>
               </div>
               <span className="text-start font-bold">
                 {update.changes[0].title} ({update.changes[0].description})

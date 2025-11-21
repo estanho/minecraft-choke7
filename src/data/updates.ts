@@ -10,6 +10,31 @@ interface IUpdates {
 
 export const updates: IUpdates[] = [
   {
+    date: "21/11/2025",
+    existsDependency: true,
+    changes: [
+      {
+        title: "+ Adicionando Armas e alguns novos mobs",
+        description: "Testando novos mods",
+        dependency: [
+          "ADICIONADOS",
+          "+ Relics: Artifacts Compat",
+          "+ Create: Hypertubes",
+          "+ Simply Swords",
+          "+ Critters and Companions",
+          "+ Adorable Hamster Pets",
+          "+ Alex's Mobs",
+          "+ Alex's Delight",
+          "+ Relics: Alex's Mobs Compat",
+          "+ Botany Pots",
+          "+ Model Gap Fix",
+          "+ Pick Up Notifier",
+          "+ Ban Hammer",
+        ],
+      },
+    ],
+  },
+  {
     date: "25/10/2025",
     existsDependency: false,
     changes: [

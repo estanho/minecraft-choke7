@@ -1,4 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+"use client";
+
 // @ts-nocheck
 import { useCallback, useMemo } from "react";
 import Particles from "react-particles";

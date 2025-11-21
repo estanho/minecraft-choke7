@@ -11,9 +11,10 @@ import Image from "next/image";
 interface ModalImgProps {
   src: string;
   alt: string;
+  isGif?: boolean;
 }
 
-export function ModalImg({ src, alt }: ModalImgProps) {
+export function ModalImg({ src, alt, isGif }: ModalImgProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -25,6 +26,7 @@ export function ModalImg({ src, alt }: ModalImgProps) {
             height={800}
             loading="eager"
             className="rounded-lg border transition-opacity hover:opacity-80"
+            unoptimized={isGif}
           />
         </button>
       </DialogTrigger>

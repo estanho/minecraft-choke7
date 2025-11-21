@@ -135,6 +135,7 @@ export function TabLaunchers() {
                   <ModalImg
                     src={images.curseforge1}
                     alt="GIF mostrando como criar o modpack"
+                    isGif
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -172,6 +173,7 @@ export function TabLaunchers() {
                   <ModalImg
                     src={images.original2}
                     alt="GIF mostrando como verificar a quantidade de memória"
+                    isGif
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -272,6 +274,7 @@ export function TabLaunchers() {
                   <ModalImg
                     src={images.sklauncher1}
                     alt="GIF mostrando como selecionar o username"
+                    isGif
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -305,6 +308,7 @@ export function TabLaunchers() {
                   <ModalImg
                     src={images.sklauncher2}
                     alt="GIF mostrando como criar a instalação"
+                    isGif
                   />
                 </AccordionContent>
               </AccordionItem>
@@ -337,6 +341,7 @@ export function TabLaunchers() {
                   <ModalImg
                     src={images.sklauncher3}
                     alt="GIF mostrando como verificar a quantidade de memória"
+                    isGif
                   />
                 </AccordionContent>
               </AccordionItem>

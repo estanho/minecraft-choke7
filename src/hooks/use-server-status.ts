@@ -1,11 +1,15 @@
-import type { ServerStatusInterface } from "@/interfaces/server-status-interface";
+"use client";
+
+import { ServerStatusInterface } from "@/interfaces/server-status-interface";
 import { useQuery } from "@tanstack/react-query";
+
+const MINUTES = 60 * 1000;
 
 export function useServerStatus() {
   const query = useQuery({
-    queryKey: ["server-status"],
+    queryKey: ["get-server-status"],
     queryFn: fetchServerStatus,
-    refetchInterval: 60 * 2 * 1000,
+    refetchInterval: 2 * MINUTES,
     retry: false,
   });
 

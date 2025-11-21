@@ -6,6 +6,18 @@ interface IMods {
 
 export const mods: IMods[] = [
   {
+    name: "Adorable Hamster Pets",
+    url: "https://www.curseforge.com/minecraft/mc-mods/adorable-hamster-pets",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/1524/546/64/64/638989917477573226.png",
+  },
+  {
+    name: "Alex's Mobs",
+    url: "https://www.curseforge.com/minecraft/mc-mods/alexs-mobs",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/543/777/64/64/637874731161865623.jpeg",
+  },
+  {
     name: "Artifacts",
     url: "https://www.curseforge.com/minecraft/mc-mods/artifacts",
     img_url:
@@ -36,10 +48,22 @@ export const mods: IMods[] = [
       "https://media.forgecdn.net/avatars/thumbnails/203/105/64/64/636930549407382137.png",
   },
   {
+    name: "Chipped",
+    url: "https://www.curseforge.com/minecraft/mc-mods/chipped",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/495/254/64/64/637808243655328652_animated.gif",
+  },
+  {
     name: "Create",
     url: "https://www.curseforge.com/minecraft/mc-mods/create",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/1065/184/64/64/638598725500886388.png",
+  },
+  {
+    name: "Critters and Companions",
+    url: "https://www.curseforge.com/minecraft/mc-mods/critters-and-companions",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/728/545/64/64/638081057334527379.png",
   },
   {
     name: "Emotecraft",
@@ -54,10 +78,22 @@ export const mods: IMods[] = [
       "https://media.forgecdn.net/avatars/thumbnails/396/11/64/64/637595005615179370.png",
   },
   {
+    name: "Gliders",
+    url: "https://www.curseforge.com/minecraft/mc-mods/gliders",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/843/900/64/64/638240619391807565.png",
+  },
+  {
     name: "Handcrafted",
     url: "https://www.curseforge.com/minecraft/mc-mods/handcrafted",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/676/448/64/64/638067467429210259_animated.gif",
+  },
+  {
+    name: "Immersive Melodies",
+    url: "https://www.curseforge.com/minecraft/mc-mods/immersive-melodies",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/867/344/64/64/638280636660476412.png",
   },
   {
     name: "Iron's Spells 'n Spellbooks",
@@ -108,10 +144,22 @@ export const mods: IMods[] = [
       "https://media.forgecdn.net/avatars/thumbnails/1013/839/64/64/638538895773776677.png",
   },
   {
+    name: "Simple Hats",
+    url: "https://www.curseforge.com/minecraft/mc-mods/simplehats",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/557/273/64/64/637903735021414748.png",
+  },
+  {
     name: "Simple Voice Chat",
     url: "https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat",
     img_url:
       "https://media.forgecdn.net/avatars/thumbnails/391/367/64/64/637584172062782791.png",
+  },
+  {
+    name: "Simply Swords",
+    url: "https://www.curseforge.com/minecraft/mc-mods/simply-swords",
+    img_url:
+      "https://media.forgecdn.net/avatars/thumbnails/611/576/64/64/637996129346404798_animated.gif",
   },
   {
     name: "SkinChanger",

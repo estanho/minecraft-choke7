@@ -30,7 +30,7 @@ const monocraft = localFont({
 export const metadata: Metadata = {
   title: "Minecraft Choke7",
   description: "Site do servidor de Minecraft da Choke7",
-  creator: "Estanho",
+  creator: "Pedro Henrique da Rosa Garcia",
 };
 
 export default function RootLayout({

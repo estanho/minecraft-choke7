@@ -67,6 +67,7 @@ export function TabDownloads() {
             <ModalImg
               src={images.curseforge}
               alt="GIF mostrando como extrair os arquivos do .zip (CURSEFORGE)"
+              isGif
             />
           </AccordionContent>
         </AccordionItem>
@@ -96,6 +97,7 @@ export function TabDownloads() {
             <ModalImg
               src={images.appdata}
               alt="GIF mostrando onde encontrar a pasta .minecraft"
+              isGif
             />
           </AccordionContent>
         </AccordionItem>
@@ -126,6 +128,7 @@ export function TabDownloads() {
             <ModalImg
               src={images.installation}
               alt="GIF mostrando como instalar os mods"
+              isGif
             />
           </AccordionContent>
         </AccordionItem>

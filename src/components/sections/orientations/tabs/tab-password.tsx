@@ -53,6 +53,7 @@ export function TabPassword() {
             <ModalImg
               src={images.password}
               alt="GIF mostrando como criar a senha"
+              isGif
             />
           </AccordionContent>
         </AccordionItem>

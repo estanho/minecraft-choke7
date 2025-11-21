@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 interface ClickableSoundImageProps {
   src: string;

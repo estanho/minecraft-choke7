@@ -1,3 +1,5 @@
+"use client";
+
 import { ClickableSoundImage } from "@/components/jokes/clickable-sound-image";
 import { Button } from "@/components/ui/button";
 import {
