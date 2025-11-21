@@ -1,16 +1,16 @@
 "use client";
 
-// @ts-nocheck
 import { useCallback, useMemo } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 
 export function FallingParticles() {
+  // @ts-ignore
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // @ts-ignore
   const particlesLoaded = useCallback(async (container) => {}, []);
 
   const options = useMemo(
@@ -203,6 +203,7 @@ export function FallingParticles() {
         id="falling-particles"
         init={particlesInit}
         loaded={particlesLoaded}
+        // @ts-ignore
         options={options}
         style={{
           width: "100%",
