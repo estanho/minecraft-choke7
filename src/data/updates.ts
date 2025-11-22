@@ -10,6 +10,17 @@ interface IUpdates {
 
 export const updates: IUpdates[] = [
   {
+    date: "22/11/2025",
+    existsDependency: false,
+    changes: [
+      {
+        title: "+ Correção de bugs relacionada ao Create",
+        description: "Alteração de versão de alguns mods",
+        dependency: [],
+      },
+    ],
+  },
+  {
     date: "21/11/2025",
     existsDependency: true,
     changes: [
