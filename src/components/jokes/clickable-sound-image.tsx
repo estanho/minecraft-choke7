@@ -72,7 +72,7 @@ export function ClickableSoundImage({
             alt={alt}
             width={width}
             height={height}
-            fill
+            fill={fill}
             priority={priority}
             className="cursor-pointer object-cover transition-transform select-none hover:scale-105 active:scale-95"
             draggable={false}
@@ -84,9 +84,10 @@ export function ClickableSoundImage({
           alt={alt}
           width={width}
           height={height}
+          fill={fill}
           priority={priority}
           onClick={handleClick}
-          className={`cursor-pointer transition-transform select-none hover:scale-105 active:scale-95 ${className}`}
+          className={`cursor-pointer object-contain transition-transform select-none hover:scale-105 active:scale-95 ${className}`}
           draggable={false}
         />
       )}

@@ -66,6 +66,7 @@ export function ServerStatus() {
               height={64}
             />
           )}
+
           <div className="mt-1 text-sm lg:text-base">
             <span className="text-white">Lagoa dos Sapos</span>
             {isOfflineState ? (
@@ -78,7 +79,9 @@ export function ServerStatus() {
                   <div
                     id="motd"
                     className="text-balance"
-                    dangerouslySetInnerHTML={{ __html: data.motd.html[0] }}
+                    dangerouslySetInnerHTML={{
+                      __html: data.motd.html[0],
+                    }}
                   />
                 )}
               </>
@@ -87,7 +90,7 @@ export function ServerStatus() {
         </div>
 
         <HoverCard>
-          <HoverCardTrigger className="cursor-pointer" asChild>
+          <HoverCardTrigger className="cursor-pointer justify-end" asChild>
             <Button
               variant={"link"}
               className="pr-0 text-gray-400 hover:no-underline"
