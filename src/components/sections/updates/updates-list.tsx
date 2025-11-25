@@ -14,7 +14,7 @@ export function UpdatesList() {
         return (
           <Collapsible
             key={index}
-            className={`rounded-xl border-2 ${update.existsDependency && "bg-background/30"}`}
+            className={`rounded-xl border-2 ${update.existsDependency && "dark:bg-background/30 bg-foreground/5"}`}
           >
             <CollapsibleTrigger
               className={`flex w-full flex-col items-start gap-1 p-3 ${update.existsDependency && "cursor-pointer"}`}
@@ -28,7 +28,7 @@ export function UpdatesList() {
 
                 <div>
                   <ChevronDown
-                    className={`h-4 w-4 ${update.existsDependency ? "opacity-80" : "opacity-25"}`}
+                    className={`h-4 w-4 ${update.existsDependency ? "opacity-90" : "opacity-10"}`}
                   />
                 </div>
               </div>
