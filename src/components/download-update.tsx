@@ -1,4 +1,5 @@
 import { LinkButton } from "@/components/links/link-button";
+import { Separator } from "@/components/ui/separator";
 import { download } from "@/data/download";
 
 export function DownloadUpdate() {
@@ -28,11 +29,23 @@ export function DownloadUpdate() {
 
         <p>
           Para instalar é semelhante a primeira instalação, você deve extrair o
-          conteúdo do arquivo baixado na pasta{" "}
-          <span className="font-bold underline underline-offset-3">
-            .minecraft
-          </span>
-          . O total de mods dentro da pasta{" "}
+          conteúdo do arquivo baixado diretamente na pasta do minecraft.
+        </p>
+
+        <Separator className="my-6" />
+
+        <h4>⚠️ Orientações dessa atualizações: ⚠️</h4>
+
+        <p className="font-bold">
+          • EXCLUIR todo o conteúdo da pasta MODS antes da atualização!
+          <br />• NÃO é necessário excluir a pasta CONFIG, apenas aceitar a
+          substituição dos arquivos.
+        </p>
+
+        <Separator className="my-6" />
+
+        <p>
+          O total de mods dentro da pasta{" "}
           <span className="font-bold underline underline-offset-3">mods</span>{" "}
           deve ser de{" "}
           <span className="font-bold underline underline-offset-3">
@@ -41,19 +54,9 @@ export function DownloadUpdate() {
           após a atualização.
         </p>
 
-        <p className="font-bold">
-          ⚠️ Por favor excluir todo o conteúdo da pasta MODS antes da
-          atualização. ⚠️
-        </p>
-        <p className="font-bold">
-          Não é necessário excluir a pasta CONFIG, apenas aceitar a substituição
-          dos arquivos.
-        </p>
-
-        <p>Download da atualização completa.</p>
         <LinkButton
           href={download.last_update_url}
-          text="Download completo da atualização"
+          text="Download da atualização (.zip)"
           label="Link para download da atualização completa"
         />
       </div>
