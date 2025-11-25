@@ -1,8 +1,8 @@
 "use client";
 
 import { LinkInline } from "@/components/links/link-inline";
-import { TabDownloads } from "@/components/sections/orientations/tabs/tab-downloads";
 import { TabLaunchers } from "@/components/sections/orientations/tabs/tab-launchers";
+import { TabModpack } from "@/components/sections/orientations/tabs/tab-modpack";
 import { TabNext } from "@/components/sections/orientations/tabs/tab-next";
 import { TabPassword } from "@/components/sections/orientations/tabs/tab-password";
 import { TabWhitelist } from "@/components/sections/orientations/tabs/tab-whitelist";
@@ -59,7 +59,7 @@ export function OrientationsSection() {
         <Tabs defaultValue="launchers" value={tab} onValueChange={setTab}>
           <TabsList>
             <TabsTrigger value="launchers">Launchers</TabsTrigger>
-            <TabsTrigger value="downloads">Downloads</TabsTrigger>
+            <TabsTrigger value="modpack">Modpack</TabsTrigger>
             <TabsTrigger value="password">Senha no Minecraft</TabsTrigger>
             <TabsTrigger value="whitelist">Whitelist</TabsTrigger>
           </TabsList>
@@ -68,12 +68,12 @@ export function OrientationsSection() {
             <TabNext
               scrollingToElement={scrollingToElement}
               onChange={setTab}
-              tabName="downloads"
-              buttonText="Downloads"
+              tabName="modpack"
+              buttonText="Modpack"
             />
           </TabsContent>
-          <TabsContent value="downloads">
-            <TabDownloads />
+          <TabsContent value="modpack">
+            <TabModpack />
             <TabNext
               scrollingToElement={scrollingToElement}
               onChange={setTab}

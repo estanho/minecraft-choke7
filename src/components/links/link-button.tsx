@@ -9,7 +9,7 @@ interface LinkButtonProps {
 
 export function LinkButton({ href, text, label }: LinkButtonProps) {
   return (
-    <Button size={"lg"} className="mb-4 cursor-pointer border" asChild>
+    <Button size={"lg"} className="my-2 cursor-pointer border" asChild>
       <a
         href={href}
         target="_blank"

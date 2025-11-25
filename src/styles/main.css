@@ -169,6 +169,10 @@
   #accordion-trigger > img {
     @apply w-8 rounded-lg object-cover;
   }
+
+  .orientation-step {
+    @apply rounded-sm bg-black/10 dark:bg-white/5 p-2 font-semibold;
+  }
 }
 
 @layer base {
