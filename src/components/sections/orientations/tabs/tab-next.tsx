@@ -18,7 +18,8 @@ export function TabNext({
     <div className="flex flex-col gap-2">
       <Button
         variant={"outline"}
-        className="cursor-pointer"
+        size={"lg"}
+        className="cursor-pointer text-base"
         onClick={() => {
           scrollingToElement(tabName);
           if (onChange) {

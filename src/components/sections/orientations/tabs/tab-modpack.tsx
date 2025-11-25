@@ -73,6 +73,7 @@ export function TabModpack() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
         <Separator />
 
         <p className="orientation-step text-lg font-bold">SKLauncher:</p>
@@ -142,7 +143,49 @@ export function TabModpack() {
         </Accordion>
       </div>
 
-      <Separator />
+      <Separator className="my-6" />
+
+      <div>
+        <h4 className="orientation-step mb-3">4. Shaders (Opcional)</h4>
+
+        <Accordion id="shaders" type="multiple">
+          <AccordionItem value="shaders">
+            <AccordionTrigger>
+              <div className="flex items-center gap-4">
+                <Layers />
+                Recomendações de Shaders
+                <span className="animate-pulse font-light">
+                  (Clique aqui para visualizar)
+                </span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent>
+              <p>
+                Se quiser utilizar shaders, basta baixar o shader e colocar o
+                arquivo diretamente na pasta{" "}
+                <span className="font-bold">shaderpacks</span> dentro da pasta
+                do <span className="font-bold">minecraft</span>.
+              </p>
+              <p>Recomendações de shaders bacanas:</p>
+
+              <div className="mt-4 flex max-w-fit flex-col">
+                <LinkButton
+                  href="https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/all?page=1&pageSize=20&version=1.20.1"
+                  text="Download Complementary Shaders"
+                  label="Link para download do Shader Complementary Shaders - Unbound"
+                />
+                <LinkButton
+                  href="https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/all?page=1&pageSize=20&version=1.20.1"
+                  text="Download Sildurs Vibrant Shaders"
+                  label="Link para download do Shader Sildurs Vibrant Shaders"
+                />
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
+
+      <Separator className="my-6" />
 
       <div>
         <h4 className="orientation-step">3. Tudo pronto!</h4>
@@ -151,45 +194,6 @@ export function TabModpack() {
           configuração!
         </p>
       </div>
-
-      <Separator className="my-6" />
-
-      <h4 className="orientation-step">4. Shaders (Opcional)</h4>
-      <Accordion id="shaders" type="multiple">
-        <AccordionItem value="shaders">
-          <AccordionTrigger>
-            <div className="flex items-center gap-4">
-              <Layers />
-              Recomendações de Shaders
-              <span className="animate-pulse font-light">
-                (Clique aqui para visualizar)
-              </span>
-            </div>
-          </AccordionTrigger>
-          <AccordionContent>
-            <p>
-              Se quiser utilizar shaders, basta baixar o shader e colocar o
-              arquivo diretamente na pasta{" "}
-              <span className="font-bold">shaderpacks</span> dentro da pasta do{" "}
-              <span className="font-bold">minecraft</span>.
-            </p>
-            <p>Recomendações de shaders bacanas:</p>
-
-            <div className="mt-4 flex max-w-fit flex-col">
-              <LinkButton
-                href="https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/all?page=1&pageSize=20&version=1.20.1"
-                text="Download Complementary Shaders"
-                label="Link para download do Shader Complementary Shaders - Unbound"
-              />
-              <LinkButton
-                href="https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/all?page=1&pageSize=20&version=1.20.1"
-                text="Download Sildurs Vibrant Shaders"
-                label="Link para download do Shader Sildurs Vibrant Shaders"
-              />
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
 
       <Separator />
 
