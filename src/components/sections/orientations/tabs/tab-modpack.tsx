@@ -146,7 +146,7 @@ export function TabModpack() {
       <Separator className="my-6" />
 
       <div>
-        <h4 className="orientation-step mb-3">4. Shaders (Opcional)</h4>
+        <h4 className="orientation-step mb-3">3. Shaders (Opcional)</h4>
 
         <Accordion id="shaders" type="multiple">
           <AccordionItem value="shaders">
@@ -188,7 +188,7 @@ export function TabModpack() {
       <Separator className="my-6" />
 
       <div>
-        <h4 className="orientation-step">3. Tudo pronto!</h4>
+        <h4 className="orientation-step">4. Tudo pronto!</h4>
         <p>
           Meus parabéns! 🎉 Você já instalou os mods, emotes e arquivos de
           configuração!
