@@ -10,6 +10,17 @@ interface IUpdates {
 
 export const updates: IUpdates[] = [
   {
+    date: "30/11/2025",
+    existsDependency: false,
+    changes: [
+      {
+        title: "+ Correção de bugs relacionada aos Hamsters",
+        description: "Alteração de versão de alguns mods",
+        dependency: [],
+      },
+    ],
+  },
+  {
     date: "22/11/2025",
     existsDependency: false,
     changes: [
