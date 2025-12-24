@@ -26,10 +26,10 @@ export function OrientationsSection() {
       <Card>
         <h2>Tutorial para Primeira Instalação</h2>
         <div id="tutorial" className="space-y-4">
-          <h3>Tutorial em Vídeo</h3>
+          <h3>Tutorial em Vídeo [DESATUALIZADO]</h3>
           <p>
             Tutorial rápido de como instalar e configurar o seu Minecraft para
-            jogar no servidor.
+            jogar no servidor. Esse vídeo está desatualizado!
           </p>
           <p className="font-bold">
             Veja o Passo a Passo abaixo para uma explicação mais detalhada.
