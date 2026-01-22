@@ -1,5 +1,5 @@
 import { LinkButton } from "@/components/links/link-button";
-import { LinkInline } from "@/components/links/link-inline";
+//import { LinkInline } from "@/components/links/link-inline";
 import { ModalImg } from "@/components/modal-img";
 import {
   Accordion,

@@ -5,12 +5,12 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 
 export function FallingParticles() {
-  // @ts-ignore
+  // @ts-expect-error - Particles typings are wrong
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
 
-  // @ts-ignore
+  // @ts-expect-error - Particles typings are wrong
   const particlesLoaded = useCallback(async (container) => {}, []);
 
   const options = useMemo(
@@ -203,7 +203,7 @@ export function FallingParticles() {
         id="falling-particles"
         init={particlesInit}
         loaded={particlesLoaded}
-        // @ts-ignore
+        // @ts-expect-error - Particles typings are wrong
         options={options}
         style={{
           width: "100%",

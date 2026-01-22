@@ -48,9 +48,10 @@ export function TabModpack() {
         <p className="orientation-step text-lg font-bold">CurseForge:</p>
 
         <p>
-          • Você deve clicar nos três pontinhos e em &quot;Open Folder&quot;
-          para abrir a pasta do minecraft do modpack. <br /> • Depois disso você
-          extrai os arquivos do .zip diretamente na pasta do minecraft.
+          • Dentro do CurseForge você deve clicar nos três pontinhos e em
+          &quot;Open Folder&quot; para abrir a pasta do minecraft do modpack.{" "}
+          <br /> • Depois disso você extrai os arquivos do .zip diretamente na
+          pasta do minecraft.
         </p>
         <p className="mb-3">Veja o GIF abaixo:</p>
         <Accordion id="curseforge" type="multiple" className="mb-6">
