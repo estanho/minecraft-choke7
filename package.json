@@ -1,7 +1,8 @@
 {
-  "name": "new",
-  "version": "0.1.0",
+  "name": "minecraft-choke7",
+  "version": "1.0.0",
   "private": true,
+  "author": "Pedro Henrique da Rosa Garcia (Estanho)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
