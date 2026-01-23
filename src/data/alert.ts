@@ -7,8 +7,8 @@ interface IAlert {
 
 export const alert: IAlert = {
   enable: true,
-  title: "Nova atualização disponível [30/11/2025]",
+  title: "Recomeço do servidor em breve! ⌛",
   description:
-    "Atualização de correção de bugs! Baixe a última atualização do Servidor da Lagoa dos Sapos! Veja o que há de novo nas Atualizações! 🐸",
+    "Após votação no discord, foi definido que o servidor vai passar por um recomeço (reset). Um novo modpack e mapa serão disponibilizados em breve! Fique atento para novas atualizações!",
   duration: 30_000,
 };
