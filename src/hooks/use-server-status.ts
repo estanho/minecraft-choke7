@@ -3,13 +3,11 @@
 import { ServerStatusInterface } from "@/interfaces/server-status-interface";
 import { useQuery } from "@tanstack/react-query";
 
-const MINUTES = 60 * 1000;
-
 export function useServerStatus() {
   const query = useQuery({
     queryKey: ["get-server-status"],
     queryFn: fetchServerStatus,
-    refetchInterval: 2 * MINUTES,
+    refetchOnWindowFocus: true,
     retry: false,
   });
 
@@ -20,5 +18,6 @@ export function useServerStatus() {
 }
 
 async function fetchServerStatus(): Promise<ServerStatusInterface> {
-  return await fetch("/api/status").then((res) => res.json());
+  const res = await fetch("/api/status");
+  return res.json();
 }
