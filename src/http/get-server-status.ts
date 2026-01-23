@@ -7,7 +7,7 @@ export async function getServerStatus() {
 
   try {
     const response = await fetch(`https://api.mcsrvstat.us/3/${serverIP}`, {
-      cache: "force-cache",
+      next: { revalidate: 120 },
     });
 
     const data = await response.json();
