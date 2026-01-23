@@ -1,19 +1,22 @@
 "use client";
 
-import { useCallback, useMemo } from "react";
-import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
+import { type ISourceOptions } from "@tsparticles/engine";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useMemo, useState } from "react";
 
 export function FallingParticles() {
-  // @ts-expect-error - Particles typings are wrong
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
 
-  // @ts-expect-error - Particles typings are wrong
-  const particlesLoaded = useCallback(async (container) => {}, []);
-
-  const options = useMemo(
+  const options: ISourceOptions = useMemo(
     () => ({
       background: {
         color: {
@@ -32,18 +35,17 @@ export function FallingParticles() {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           onHover: {
             enable: true,
             mode: "repulse",
           },
-          resize: true,
         },
         modes: {
           push: {
-            quantity: 0,
+            quantity: 4,
           },
           repulse: {
             distance: 150,
@@ -85,7 +87,7 @@ export function FallingParticles() {
             enable: true,
             area: 1000,
           },
-          value: 8,
+          value: 16,
         },
         opacity: {
           value: {
@@ -187,32 +189,13 @@ export function FallingParticles() {
     []
   );
 
-  return (
-    <div
-      className="pointer-events-none fixed inset-0"
-      style={{
-        zIndex: 9999,
-        width: "100vw",
-        height: "100vh",
-        position: "fixed",
-        top: 0,
-        left: 0,
-      }}
-    >
+  if (init) {
+    return (
       <Particles
-        id="falling-particles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        // @ts-expect-error - Particles typings are wrong
+        id="tsparticles"
         options={options}
-        style={{
-          width: "100%",
-          height: "100%",
-          position: "absolute",
-          top: 0,
-          left: 0,
-        }}
+        className="pointer-events-none fixed inset-0 z-50"
       />
-    </div>
-  );
+    );
+  }
 }

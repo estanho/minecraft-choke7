@@ -1,1 +1,1 @@
-# Minecraft Choke7 Server
+# Minecraft Choke7 Server V2
