@@ -51,7 +51,7 @@ export function TabLaunchers() {
             <div>
               <p className="mb-3">
                 O CurseForge é o principal gerenciador de mods para o Minecraft
-                original, permitindo baixar e instale mods para o jogo
+                Original, permitindo baixar e instalar mods para o jogo
                 facilmente.
               </p>
               <h4 className="orientation-step">
