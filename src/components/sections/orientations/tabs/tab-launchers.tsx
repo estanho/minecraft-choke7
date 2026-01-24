@@ -44,11 +44,15 @@ export function TabLaunchers() {
                 height={24}
                 alt="Logo do CurseForge"
               />
-              <span className="font-bold">CurseForge (Original)</span>
+              <span className="font-bold">CurseForge (Minecraft Original)</span>
             </div>
           </AccordionTrigger>
           <AccordionContent className="mt-4 space-y-4">
             <div>
+              <p className="mb-3">
+                O CurseForge é o principal gerenciador de mods para o Minecraft
+                original, que permite baixar e instale mods para o jogo.
+              </p>
               <h4 className="orientation-step">
                 1. Baixando o Minecraft Original
               </h4>
