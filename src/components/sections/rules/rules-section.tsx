@@ -7,7 +7,7 @@ export function RulesSection() {
         <h2>Regras</h2>
         <div className="flex flex-col items-center justify-center">
           <ul>
-            <li>Não destrua a contrução de outros jogadores!</li>
+            <li>Não destrua a construção de outros jogadores!</li>
             <li>Não será tolerado nenhum tipo de preconceito ou ofensa!</li>
             <li>Não abuse de bugs e não utilize trapaças!</li>
             <li>
