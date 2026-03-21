@@ -1,5 +1,3 @@
-"use client";
-
 import { ModalImg } from "@/components/modal-img";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
@@ -10,15 +8,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getGalleryImages } from "@/lib/get-gallery-images";
-import { useEffect, useState } from "react";
+import { gallery } from "@/data/galery";
 
 export function Gallery() {
-  const [images, setImages] = useState<string[]>([]);
-
-  useEffect(() => {
-    getGalleryImages().then((images) => setImages(images));
-  }, []);
+  const images = gallery;
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -46,7 +39,7 @@ export function Gallery() {
           ) : (
             <CarouselItem>
               <AspectRatio ratio={16 / 9}>
-                <Skeleton className="m-auto h-[404px] w-[770px] rounded-2xl" />
+                <Skeleton className="m-auto h-101 w-192.5 rounded-2xl" />
               </AspectRatio>
             </CarouselItem>
           )}
