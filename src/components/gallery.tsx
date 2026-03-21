@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Skeleton } from "@/components/ui/skeleton";
 import { gallery } from "@/data/galery";
 
 export function Gallery() {
@@ -19,6 +18,7 @@ export function Gallery() {
         opts={{
           loop: true,
           dragFree: false,
+          containScroll: "keepSnaps",
         }}
         className="w-full max-w-3xl"
       >
