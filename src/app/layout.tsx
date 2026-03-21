@@ -10,6 +10,7 @@ import { ThemeProvider } from "@/components/provider/theme-provider";
 const pressStart2P = Press_Start_2P({
   variable: "--font-title",
   weight: "400",
+  subsets: ["latin"],
 });
 
 const roboto = Roboto({
