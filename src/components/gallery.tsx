@@ -23,7 +23,7 @@ export function Gallery() {
         className="w-full max-w-3xl"
       >
         <CarouselContent>
-          {images && images.length > 0 ? (
+          {images &&
             images.map((image, index) => {
               return (
                 <CarouselItem key={index}>
@@ -35,14 +35,7 @@ export function Gallery() {
                   </AspectRatio>
                 </CarouselItem>
               );
-            })
-          ) : (
-            <CarouselItem>
-              <AspectRatio ratio={16 / 9}>
-                <Skeleton className="m-auto h-101 w-192.5 rounded-2xl" />
-              </AspectRatio>
-            </CarouselItem>
-          )}
+            })}
         </CarouselContent>
         <CarouselPrevious className="hidden cursor-pointer lg:flex" />
         <CarouselNext className="hidden cursor-pointer lg:flex" />
