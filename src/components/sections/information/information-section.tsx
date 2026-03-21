@@ -19,7 +19,7 @@ export function InformationSection() {
             </li>
             <li>
               Servidor reinicia às 18:00 e 06:00 (
-              <span className="text-base">UTC-3</span>).
+              <span className="text-base">Horario de Brasília / UTC-3</span>).
             </li>
             <li>
               Servidor dedicado (<span className="text-base">Online 24/7</span>

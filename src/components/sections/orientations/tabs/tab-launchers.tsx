@@ -52,10 +52,11 @@ export function TabLaunchers() {
               <p className="mb-3">
                 O CurseForge é o principal gerenciador de mods para o Minecraft
                 Original, permitindo baixar e instalar mods para o jogo
-                facilmente.
+                facilmente. Ele funciona em conjunto com o Launcher Original do
+                Minecraft.
               </p>
               <h4 className="orientation-step">
-                1. Baixando o Minecraft Original
+                1. Baixando o Launcher do Minecraft Original
               </h4>
               <p>
                 Baixe o Minecraft pelo site oficial e logue com a sua conta.
@@ -72,8 +73,8 @@ export function TabLaunchers() {
             <div>
               <h4 className="orientation-step">2. Baixando o CurseForge</h4>
               <p className="mb-3">
-                Baixe o CurseForge pelo site oficial e na opção &quot;Download
-                standalone&quot;.
+                Baixe o CurseForge pelo site oficial e clicando na opção
+                &quot;Download Standalone&quot;.
               </p>
 
               <Accordion id="download-curseforge" type="multiple">
@@ -98,7 +99,7 @@ export function TabLaunchers() {
 
               <p>
                 Depois da instalação, na primeira inicialização vai ser
-                perguntado sobre criar/logar com uma conta, mas não é necessário
+                perguntado sobre criar/logar com uma conta, mas NÃO é necessário
                 nada disso. Você pode acessar o CurseForge como
                 &quot;guest&quot; (convidado).
               </p>
@@ -114,8 +115,12 @@ export function TabLaunchers() {
 
             <div>
               <h4 className="orientation-step">
-                3. Configurando o modpack no CurseForge
+                3. Configurando o Modpack no CurseForge
               </h4>
+              <p>
+                Agora você deve criar o modpack para conseguir instalar os mods
+                necessários para o servidor.
+              </p>
               <p className="mb-3">
                 • Dentro do CurseForge você deve selecionar o jogo Minecraft
                 para criar a instalação do modpack. <br /> • Você precisa criar
@@ -151,28 +156,28 @@ export function TabLaunchers() {
 
             <div>
               <h4 className="orientation-step">
-                4. Configurando a memória (Importante)
+                4. Configurando a memória (Muito Importante)
               </h4>
               <p>
                 Você pode iniciar o jogo pelo CurseForge para alterar a
                 quantidade de memória. O jogo deve estar configurado para
-                utilizar pelo menos 5GB de RAM.
+                utilizar pelo menos 5GB de memória RAM.
               </p>
               <p>
                 • Dentro do Launcher Original que vai ser aberto pelo
                 CurseForge. <br /> • No menu de edição da instalação, você deve
-                selecionar a opção para exibir &quot;Mais Opções&quot; e
+                selecionar o botão para exibir &quot;Mais Opções&quot; e
                 verificar a quantidade de memória máxima para o Minecraft.{" "}
                 <br /> • A quantidade de memória está na linha de
                 &quot;Argumentos da JVM&quot;. <br /> • Logo no início da linha
                 está o valor &quot;-Xmx2G ...&quot; ou algo semelhante. <br /> •
                 Para aumentar você deve alterar para &quot;-Xmx5G ...&quot;.{" "}
                 <br /> • Esse &quot;5G&quot; define a quantidade de memória que
-                o jogo vai utilizar, o mínimo recomendado é de &quot;5G&quot;
-                (5GB).
+                o jogo vai utilizar, o mínimo recomendado é de &quot;5G&quot; (5
+                GB de memória RAM).
               </p>
 
-              <p className="mb-3">Recomendo ver o GIF abaixo:</p>
+              <p className="mb-3 font-medium">Recomendo ver o GIF abaixo:</p>
 
               <Accordion id="performance-original" type="multiple">
                 <AccordionItem value="performance-original">
@@ -201,11 +206,11 @@ export function TabLaunchers() {
 
             <div>
               <h4 className="orientation-step">
-                5. Seu Minecraft está pronto para instalar o modpack!
+                5. Seu Minecraft está pronto para instalar o Modpack!
               </h4>
               <p>
-                Depois de tudo, você vai ter feito a configuração do launcher
-                para o servidor. 🎉
+                Depois de toda essa configuração, você vai ter feito o que é
+                necessário para instalar o modpack do servidor. 🎉
               </p>
             </div>
           </AccordionContent>
@@ -259,6 +264,8 @@ export function TabLaunchers() {
               <p>
                 Para instalar o SKLauncher, basta baixar o instalador no site do
                 launcher. A instalação é bem simples e já vem com o Java junto.
+                Tem um AD no site de download que é bem chato, porém é só
+                esperar ele acabar e baixar.
               </p>
 
               <LinkButton
@@ -272,7 +279,7 @@ export function TabLaunchers() {
 
             <div>
               <h4 className="orientation-step">
-                2. Configurando o username no SKLauncher
+                2. Iniciando o SKLauncher e configurando o username
               </h4>
               <p>
                 Ao abrir o SKLauncher pela primeira vez você vai conseguir
@@ -281,7 +288,8 @@ export function TabLaunchers() {
               <p className="mb-3">
                 Clique no botão &quot;Mudar para modo offline&quot; no canto
                 inferior esquerdo e depois digite o username que você deseja
-                utilizar no jogo.
+                utilizar no jogo. Fique atento se está digitando corretamente
+                (Letras maiúsculas e minúsculas fazem diferença).
               </p>
               <Accordion id="username-sklauncher" type="multiple">
                 <AccordionItem value="username-sklauncher">
@@ -309,8 +317,12 @@ export function TabLaunchers() {
 
             <div>
               <h4 className="orientation-step">
-                3. Configurando o modpack no SKLauncher
+                3. Configurando o perfil para instalar o Modpack
               </h4>
+              <p>
+                É necessário criar um &quot;perfil&quot; para o launcher
+                entender qual versão vai ser utilizada e onde vai ser instalado.
+              </p>
 
               <p>
                 • Entrando na tela inicial do launcher, você vai precisar criar
@@ -321,7 +333,7 @@ export function TabLaunchers() {
                 &quot;Forge&quot;, &quot;1.20.1&quot; e &quot;47.4.0&quot;.
               </p>
 
-              <p className="mb-3">Recomendo ver o GIF abaixo:</p>
+              <p className="mb-3 font-medium">Recomendo ver o GIF abaixo:</p>
 
               <Accordion id="installation-sklauncher" type="multiple">
                 <AccordionItem value="installation-sklauncher">
@@ -349,7 +361,7 @@ export function TabLaunchers() {
 
             <div>
               <h4 className="orientation-step">
-                4. Configurando a memória (Importante)
+                4. Configurando a memória (Muito Importante)
               </h4>
 
               <p>
@@ -421,11 +433,11 @@ export function TabLaunchers() {
 
             <div>
               <h4 className="orientation-step">
-                6. Seu Minecraft está pronto para instalar o modpack!
+                6. Seu Minecraft está pronto para instalar o Modpack!
               </h4>
               <p>
-                Depois de tudo, você vai ter feito a configuração do launcher
-                para o servidor. 🎉
+                Depois de toda essa configuração, você vai ter feito o que é
+                necessário para instalar o modpack do servidor. 🎉
               </p>
             </div>
           </AccordionContent>

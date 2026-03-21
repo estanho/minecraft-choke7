@@ -12,7 +12,7 @@ export function RulesSection() {
             <li>Não abuse de bugs e não utilize trapaças!</li>
             <li>
               Só é permitido o uso de &quot;chunk loaders&quot; em armazéns de
-              itens.
+              itens (apenas 1 por jogador).
             </li>
           </ul>
           <p className="text-lg font-bold">

@@ -20,7 +20,7 @@ const images = {
 export function TabModpack() {
   return (
     <>
-      <h3>Download do modpack</h3>
+      <h3>Download do Modpack</h3>
       <div>
         <h4 className="orientation-step">
           1. Baixando os mods, emotes e arquivos de configuração
@@ -41,11 +41,14 @@ export function TabModpack() {
       <Separator />
 
       <div>
-        <h4 className="orientation-step">2. Instalando o modpack</h4>
+        <h4 className="orientation-step">2. Instalando o Modpack</h4>
 
-        <p>O arquivo baixado deve ser extraído na pasta do minecraft.</p>
+        <p>
+          O arquivo baixado deve ser extraído na pasta do minecraft. Dependendo
+          do seu launcher essa pasta pode estar em um lugar diferente.
+        </p>
 
-        <p className="orientation-step text-lg font-bold">CurseForge:</p>
+        <p className="text-lg font-bold">CurseForge:</p>
 
         <p>
           • Dentro do CurseForge você deve clicar nos três pontinhos e em
@@ -53,13 +56,13 @@ export function TabModpack() {
           <br /> • Depois disso você extrai os arquivos do .zip diretamente na
           pasta do minecraft.
         </p>
-        <p className="mb-3">Veja o GIF abaixo:</p>
+        <p className="mb-3 font-medium">Veja o GIF abaixo:</p>
         <Accordion id="curseforge" type="multiple" className="mb-6">
           <AccordionItem value="curseforge">
             <AccordionTrigger>
               <div className="flex items-center gap-4">
                 <ImagePlay />
-                GIF mostrando como extrair os arquivos do .zip (CURSEFORGE)
+                GIF mostrando como extrair os arquivos do .zip (CurseForge)
                 <span className="animate-pulse font-light">
                   (Clique aqui para visualizar)
                 </span>
@@ -68,7 +71,7 @@ export function TabModpack() {
             <AccordionContent className="flex flex-col items-center">
               <ModalImg
                 src={images.curseforge}
-                alt="GIF mostrando como extrair os arquivos do .zip (CURSEFORGE)"
+                alt="GIF mostrando como extrair os arquivos do .zip (CurseForge)"
                 isGif
               />
             </AccordionContent>
@@ -77,7 +80,7 @@ export function TabModpack() {
 
         <Separator />
 
-        <p className="orientation-step text-lg font-bold">SKLauncher:</p>
+        <p className="text-lg font-bold">SKLauncher:</p>
 
         <p className="mb-3">
           • Para encontrar a pasta do minecraft, abra o &quot;Explorador de
@@ -117,7 +120,7 @@ export function TabModpack() {
             <AccordionTrigger>
               <div className="flex items-center gap-4">
                 <ImagePlay />
-                GIF mostrando como extrair os arquivos do .zip (SKLAUNCHER)
+                GIF mostrando como extrair os arquivos do .zip (SKLauncher)
                 <span className="animate-pulse font-light">
                   (Clique aqui para visualizar)
                 </span>
