@@ -4,7 +4,7 @@ import TiktokIcon from "@/components/icons/tiktok-icon";
 import TwitchIcon from "@/components/icons/twitch-icon";
 import XIcon from "@/components/icons/x-icon";
 import YoutubeIcon from "@/components/icons/youtube-icon";
-import YoutubeVodIcon from "@/components/icons/youtube-vod-icon";
+import YoutubeLivesIcon from "@/components/icons/youtube-lives-icon";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -44,9 +44,9 @@ const socialNetworks = [
     icon: <TiktokClipsIcon />,
   },
   {
-    name: "Youtube Vods",
-    href: "https://www.youtube.com/@choke7vods",
-    icon: <YoutubeVodIcon />,
+    name: "Youtube Lives",
+    href: "https://www.youtube.com/@livesdachoke7",
+    icon: <YoutubeLivesIcon />,
   },
 ];
 
