@@ -10,6 +10,7 @@ import { OrientationsSection } from "@/components/sections/orientations/orientat
 import { RulesSection } from "@/components/sections/rules/rules-section";
 import { ServerStatusSection } from "@/components/sections/server-status/server-status-section";
 import { UpdatesSection } from "@/components/sections/updates/updates-section";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -23,16 +24,22 @@ export default function Home() {
 
       <main>
         <div className="mx-auto max-w-7xl space-y-6 px-4 py-12">
-          <ModsSection />
+          {/*<ModsSection />*/}
 
           <div className="mx-auto max-w-4xl space-y-6">
             <ServerStatusSection />
-            <GallerySection />
-            <InformationSection />
+            {/*<GallerySection />
+            <InformationSection /> 
             <RulesSection />
             <OrientationsSection />
             <LastUpdateSection />
-            <UpdatesSection />
+            <UpdatesSection />*/}
+            <Card>
+              <h2>Recomeço do servidor em julho!</h2>
+              <div className="flex flex-col items-center justify-center">
+                <p>O recomeço do servidor vai ocorrer em julho! Novo modpack, novo mapa e novos eventos. 🐸</p>
+              </div>
+            </Card>
           </div>
         </div>
       </main>

@@ -25,6 +25,7 @@ export function OrientationsSection() {
     <section id="orientations" className="mx-auto max-w-4xl">
       <Card>
         <h2>Tutorial para Primeira Instalação</h2>
+        {/*
         <div id="tutorial" className="space-y-4">
           <h3>Tutorial em Vídeo [DESATUALIZADO]</h3>
           <p>
@@ -45,6 +46,7 @@ export function OrientationsSection() {
             ></iframe>
           </div>
         </div>
+        */}
         <h3 ref={targetElement}>Passo a Passo</h3>
         <p className="mt-0">
           Leia tudo com atenção, é importante! Caso tenha alguma dúvida, entre

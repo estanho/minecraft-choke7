@@ -7,8 +7,8 @@ interface IAlert {
 
 export const alert: IAlert = {
   enable: true,
-  title: "Recomeço do servidor em breve! ⌛",
+  title: "Recomeço do servidor em julho!",
   description:
-    "Após votação no discord, foi definido que o servidor vai passar por um recomeço (reset). Um novo modpack e mapa serão disponibilizados em breve! Fique atento para novas atualizações!",
+    "O recomeço do servidor vai ocorrer em julho! Novo modpack, novo mapa e novos eventos. 🐸",
   duration: 30_000,
 };
