@@ -37,7 +37,7 @@ export default function Home() {
             <Card>
               <h2>Recomeço do servidor em julho!</h2>
               <div className="flex flex-col items-center justify-center">
-                <p>O recomeço do servidor vai ocorrer em julho! Novo modpack, novo mapa e novos eventos. 🐸</p>
+                <p>O recomeço do servidor vai ocorrer em julho! Novo modpack, novo mapa e novos eventos.</p>
               </div>
             </Card>
           </div>
