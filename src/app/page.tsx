@@ -28,18 +28,19 @@ export default function Home() {
 
           <div className="mx-auto max-w-4xl space-y-6">
             <ServerStatusSection />
-            {/*<GallerySection />
-            <InformationSection /> 
-            <RulesSection />
-            <OrientationsSection />
-            <LastUpdateSection />
-            <UpdatesSection />*/}
             <Card>
-              <h2>Recomeço do servidor em julho!</h2>
+              <h2>🎉 Recomeço do servidor em julho! 🎉</h2>
               <div className="flex flex-col items-center justify-center">
                 <p>O recomeço do servidor vai ocorrer em julho! Novo modpack, novo mapa e novos eventos.</p>
               </div>
             </Card>
+            <GallerySection />
+            <InformationSection /> 
+            <RulesSection />
+            {/*<OrientationsSection />
+            <LastUpdateSection />*/}
+            <UpdatesSection />
+            
           </div>
         </div>
       </main>
